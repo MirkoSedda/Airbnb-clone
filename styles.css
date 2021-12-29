@@ -1,14 +1,11 @@
+*:focus {
+  outline: none;
+}
 body {
   background-image: url('/assets/homepage/img1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-.navbar {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 .badge {
   background-color: white !important;
@@ -19,4 +16,7 @@ body {
 }
 .icon2 {
   font-size: 20px;
+}
+.search {
+  border-radius: 50px;
 }
