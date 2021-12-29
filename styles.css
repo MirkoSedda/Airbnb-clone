@@ -3,9 +3,10 @@
 }
 body {
   background-image: url('/assets/homepage/img1.jpg');
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
 }
 .badge {
   background-color: white !important;
@@ -18,5 +19,27 @@ body {
   font-size: 20px;
 }
 .search {
+  background-color: white !important;
   border-radius: 50px;
+}
+.cta {
+  height: 600px;
+  position: relative;
+}
+
+.center1 {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
