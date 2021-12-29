@@ -62,3 +62,10 @@ body {
 .spacer4 {
   height: 400px;
 }
+
+.container-g1 {
+  background-image: url('/assets/homepage/g1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
