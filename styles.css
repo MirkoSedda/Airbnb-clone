@@ -1,6 +1,7 @@
 *:focus {
   outline: none;
 }
+
 body {
   background-image: url('/assets/homepage/img1.jpg');
   background-size: cover;
@@ -8,20 +9,25 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+
 .badge {
   background-color: white !important;
   border-radius: 20px;
 }
+
 .icon {
   font-size: 25px;
 }
+
 .icon2 {
   font-size: 20px;
 }
+
 .search {
   background-color: white !important;
   border-radius: 50px;
 }
+
 .cta {
   height: 600px;
   position: relative;
@@ -35,6 +41,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .center2 {
   margin: 0;
   position: absolute;
@@ -43,12 +50,15 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .spacer {
   height: 400px;
 }
+
 .img-container {
   flex-basis: 80%;
 }
+
 .explore-image {
   max-width: 100%;
 }
