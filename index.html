@@ -9,74 +9,116 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Strive's M1-M2 Holidays Homework</title>
+    <title>Airbnb clone</title>
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg text-light">
-      <div class="container-lg">
-        <div class="me">
-          <a class="navbar-brand" href="#">
-            <img src="/assets/homepage/logo.svg" alt="" width="100" height="100" class="logo d-inline-block" />
-          </a>
-        </div>
+    <!-- Hero section  -->
+    <div class="hero-section">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg text-light">
+        <div class="container-lg">
+          <div class="me">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/homepage/logo.svg" alt="" width="100" height="100" class="logo d-inline-block" />
+            </a>
+          </div>
 
-        <button class="navbar-toggler" + type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="#">Places to stay</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="#">Experiences</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="#">Online Experiences</a>
-              </li>
-            </ul>
+          <button class="navbar-toggler" + type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" href="#">Places to stay</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" href="#">Experiences</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-light" aria-current="page" href="#">Online Experiences</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center ">
+            <a class="nav-link active text-light" aria-current="page" href="#">Become a host</a>
+            <i class="icon2 bi bi-globe2 align-middle me-3"></i>
+            <span class="badge badge-pill text-dark p-2">
+              <i class="icon bi bi-list mx-2"></i>
+              <i class="icon bi bi-person-circle mx-2"></i>
+            </span>
           </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center ">
-          <a class="nav-link active text-light" aria-current="page" href="#">Become a host</a>
-          <i class="icon2 bi bi-globe2 align-middle me-3"></i>
-          <span class="badge badge-pill text-dark p-2">
-            <i class="icon bi bi-list mx-2"></i>
-            <i class="icon bi bi-person-circle mx-2"></i>
-          </span>
-        </div>
-      </div>
-      </div>
+    </div>
     </nav>
 
     <!-- Search bar -->
-       <div class="container d-none d-xxl-flex search bg-light text-dark w-50 d-flex justify-content-center p-2">
+    <div class="container d-none d-xxl-flex search bg-light text-dark w-50 d-flex justify-content-center p-2">
       <div class="row">
         <div class="col"><span class="d-flex justify-content-start">Location</span>
-          <input class="border-0" type="text" aria-label="Location"
-            class="form-control" placeholder="Where are you going?"> </div>
+          <input class="border-0" type="text" aria-label="Location" class="form-control"
+            placeholder="Where are you going?">
+        </div>
         <div class="col"><span class="d-flex justify-content-start">Check-in</span>
-          <input class="border-0" type="text" aria-label="Check-in" id="check-in"
-            placeholder="Add dates"> </div>
+          <input class="border-0" type="text" aria-label="Check-in" id="check-in" placeholder="Add dates">
+        </div>
         <div class="col"><span class="d-flex justify-content-start">Check-out</span>
-          <input class="border-0" type="text" aria-label="Check-out" id="check-out"
-            placeholder="Add dates"> </div>
+          <input class="border-0" type="text" aria-label="Check-out" id="check-out" placeholder="Add dates">
+        </div>
         <div class="col"><span class="d-flex justify-content-start">Guests</span>
-          <input class="border-0" type="text" id="guests" placeholder="Add guests"> </div>
+          <input class="border-0" type="text" id="guests" placeholder="Add guests">
+        </div>
       </div>
     </div>
-    
+
     <!-- Call to action content  -->
     <div class="container-lg cta">
       <h1 class="h3 center1 text-dark">Not sure where to go? Perfect.</h1>
       <h2 class="center2 badge rounded-pill py-3 px-5 fs-5 text-primary bg-light">I'm flexible</h2>
     </div>
+    </div>
 
+    <!-- Spacer -->
+
+    <div class="spacer"></div>
+
+    <!-- Explore nearby -->
+
+    <section>
+      <div class="container-lg">
+        <h2 class="h1 mb-5">
+          Explore nearby
+        </h2>
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="img-container">
+                <img src="/assets/homepage/e1.jpg" alt="city picture" width="100px" class="explore-image">
+              </div>
+              <div class="explore-text">
+                <span>Milan</span>
+                <span class="text-muted">1-hour drive</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+    </section>
+    <div class="spacer"></div>
     <!-- HTML & CSS EXERCISES -->
 
     <!-- EXERCISE 1 
