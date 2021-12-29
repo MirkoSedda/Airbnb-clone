@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 100vh;
 }
 .badge {
   background-color: white !important;
@@ -42,4 +42,18 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.spacer {
+  height: 400px;
+}
+.img-container {
+  flex-basis: 80%;
+}
+.explore-image {
+  max-width: 100%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
 }
