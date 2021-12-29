@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Strive's M1-M2 Holidays Homework</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+      <div class="container-fluid">
+        <div>
+          <a class="navbar-brand" href="#">
+            <img
+              src="/assets/homepage/logo.svg"
+              alt=""
+              width="100"
+              height="100"
+              class="logo d-inline-block"
+            />
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          +
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Places to stay</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Experiences</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Online Experiences</a
+                >
+              </li>
+            </ul>
+            <!-- <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center ">
+            <a class="nav-link active text-light" aria-current="page" href="#"
+            >Become a host</a
+          >
+          <i class="bi bi-globe2 align-middle me-3"></i>
+          <span class="badge badge-pill text-dark p-3">
+            <i class="bi bi-list mx-2"></i>
+            <i class="bi bi-person-circle mx-2"></i>
+          </span>
+        </div>
+       </div>
+      </div>
+    </nav>
+    <!-- HTML & CSS EXERCISES -->
+
+    <!-- EXERCISE 1 
+     Implement the first image (1-Airbnb-homepage.png) following closely alignments, positioning, and layout 
+     hint: to achieve the main search component effect you should use inputs with no colors (transparent), composed together and style the div that wraps them instead. use input of different types (text, number, etc..)
+     for the "inspiration" section you can create just 3 rows of suggested destinations -->
+
+    <!-- EXERCISE 2 
+     Make it responsive! More importantly the mobile version should not create any issues. 
+     Make sure to respect the second image layout (2-Airbnb-homepage-mobile-view.png) -->
+
+    <!-- EXERCISE 3
+     Create the Search layout as seen in the (3-Search-page.png) image.
+     Use the assets provided for the picture. 
+     n.b.: We are not asking you to create a working pagination or navigation. Just replicate the layout precisely -->
+
+    <!-- #### EXTRA -->
+
+    <!-- EXERCISE 4
+        Create the login modal in the search page. 
+        When the user clicks on the avatar (top-right corner), the login modal should appear over the search -->
+
+    <!-- EXERCISE 5 Implement the Host page (5-EXTRA-Host-page.png) using the assets provided -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // #### JS EXERCISES
+
+      // EXERCISE 1
+      // Take the value from the city input field and display it in an H1 on the center of the Hero content, on top of the image.
+      // The letter should appear one by one while the user types them in the input.
+
+      // EXERCISE 2
+      // Create an array of objects for each city you can think of. Each one should look like the following:
+      //      {
+      //         city: "Barcellona",
+      //         img: "https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg"
+      //      }
+
+      // EXERCISE 3
+      // We want to display the picture of the corresponding searched city as the new background of the hero section.
+
+      // In the same place you took the input value, use -at the same time- a for loop to perform a check
+      // on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
+
+      // Check if the searched city is found in any object in the array.
+      // If it's found, use the img property as the new source for the background image of the hero section.
+
+      // What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
+
+      // EXERCISE 4
+      // create new arrays with similar structure [{img: "http://...", text: "lorem ipsum"}, {...}, {...}]
+      // for every section in the homepage that has text+image and make it so
+      // that every section which contains img+text gets generated in a randomized order on every page refresh.
+
+      // EXERCISE 5
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
+      //
+      // Create a Date object via JavaScript and format it to have a date looking like this: "09/07/2021, 12:51:15"
+      // Apply it in a <span> above the <h1> to show to the user the date and time of the search, but instead of the comma, separate the two with an em dash: — like so: "09/07/2021 — 12:51:15"
+      // (you can create the em dash with a combination on the numpad that is: ALT + 0151)
+
+      // EXERCISE 6
+      // The search fields include: Location, Check-in date, Check-out date, Number of guests. You've displayed the first one in the H1 field on EX 1 already.
+      // Let's use the rest of the data in this way; when the user clicks the search button:
+      // - Create a list below the H1.
+      // - get the values from the date inputs and format them to display list items with the check-in & check-out dates as:
+      //      Check in: 25/07/2021
+      //      Check out: 30/07/2021
+      // - and the number of guests the user have selected in another list item.
+      //      Guests: 2
+
+      // EXERCISE 7
+      // On the "I'm flexible" button that you have in the page, attach the functionality to open a modal that displays
+      // a random city and image from the first array that you've created.
+
+      // #### EXTRA
+      // Create a working clock on the top-right corner of the website to display the current time to the user (hint: Date obj & setInterval)
+
+      // Create a countdown that displays the remaining time of an offer in the page (starting from 5 minutes),
+      // to give a sense of urgency to the user to book an appartment before the offer ends.
+
+      // The countdown should appear in a modal after 1 minute from the page load.
+      // Display an alert when the time is up.
+
+      // Find a way to reuse the same modal with different information passed in, instead of creating multiple modals with different IDs.
+    </script>
+  </body>
+</html>
