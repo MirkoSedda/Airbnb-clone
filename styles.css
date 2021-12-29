@@ -51,19 +51,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.spacer {
+.spacer2 {
+  height: 200px;
+}
+
+.spacer3 {
+  height: 300px;
+}
+
+.spacer4 {
   height: 400px;
-}
-
-.img-container {
-  flex-basis: 80%;
-}
-
-.explore-image {
-  max-width: 100%;
-}
-
-.text {
-  font-size: 20px;
-  padding-left: 20px;
 }
