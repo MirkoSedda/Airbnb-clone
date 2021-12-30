@@ -51,19 +51,23 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.spacer1 {
+.spacer50 {
+  height: 50px;
+}
+
+.spacer100 {
   height: 100px;
 }
 
-.spacer2 {
+.spacer200 {
   height: 200px;
 }
 
-.spacer3 {
+.spacer300 {
   height: 300px;
 }
 
-.spacer4 {
+.spacer400 {
   height: 400px;
 }
 
