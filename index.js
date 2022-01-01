@@ -7,6 +7,8 @@
 const input = document.querySelector('#input-field')
 const cta = document.querySelector('.cta')
 const heroImg = document.querySelector('.hero-img')
+const selectedImgs = document.querySelectorAll('.selected-img')
+
 const h1 = document.createElement('h1')
 
 //document.createElement('div').prepend(span)
@@ -51,6 +53,14 @@ const cities = [
 // EXERCISE 3
 // We want to display the picture of the corresponding searched city as the new background of the hero section.
 
+// In the same place you took the input value, use -at the same time- a for loop to perform a check
+// on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
+
+// Check if the searched city is found in any object in the array.
+// If it's found, use the img property as the new source for the background image of the hero section.
+
+// What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
+
 const background = () => {
   const input = document.querySelector('#input-field').value
   for (let i = 0; i < cities.length; i++) {
@@ -60,18 +70,46 @@ const background = () => {
   }
 }
 
-// In the same place you took the input value, use -at the same time- a for loop to perform a check
-// on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
-
-// Check if the searched city is found in any object in the array.
-// If it's found, use the img property as the new source for the background image of the hero section.
-
-// What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
-
 // EXERCISE 4
 // create new arrays with similar structure [{img: "http://...", text: "lorem ipsum"}, {...}, {...}]
 // for every section in the homepage that has text+image and make it so
 // that every section which contains img+text gets generated in a randomized order on every page refresh.
+
+const images = () => {
+  arr = []
+  for (let i = 1; i <= 8; i++) {
+    arr.push(`/assets/homepage / e${[i]}.jpg`)
+  }
+  return arr
+}
+images()
+
+const randomizeIt = () => {
+  arr.sort(() => Math.random() - 0.5)
+  return arr
+}
+randomizeIt()
+
+const changeImg = () => {
+  console.log(selectedImgsZ)
+  for (i = 0; i < arr.length; i++) {
+    const imgPath = arr[i]
+    selectedImgs.setAttribute('src', imgPath)
+  }
+}
+changeImg(images())
+//                <div class="d-flex align-items-center">
+//                 <img
+//                   src="/assets/homepage/e1.jpg"
+//                   class="rounded-3"
+//                   alt="city picture"
+//                   width="100px"
+//                 />
+//                 <div class="ms-3">
+//                   <h5 class="text-bold fs-5">Milan</h5>
+//                   <span class="text-muted fs-6">1-hour drive</span>
+//                 </div>
+//               </div>
 
 // EXERCISE 5
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
