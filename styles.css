@@ -51,6 +51,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.spacer5 {
+  height: 5px;
+}
+
 .spacer50 {
   height: 50px;
 }
