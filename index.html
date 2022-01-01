@@ -102,17 +102,20 @@
     <div
       class="
         container-xl
-        d-flex
+        d-flex d-none d-xl-block
         search
         bg-light
         text-dark
         justify-content-center
+        align-items-center
         p-2
       "
     >
       <div class="row">
         <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start input-text">Location</span>
+          <span class="d-flex justify-content-start fw-bold input-text"
+            >Location</span
+          >
           <input
             class="border-0 input-text"
             type="text"
@@ -123,7 +126,9 @@
         </div>
 
         <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start input-text">Check-in</span>
+          <span class="d-flex justify-content-start fw-bold input-text"
+            >Check-in</span
+          >
           <input
             class="border-0 input-text"
             type="text"
@@ -134,7 +139,9 @@
         </div>
 
         <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start input-text">Check-out</span>
+          <span class="d-flex justify-content-start fw-bold input-text"
+            >Check-out</span
+          >
           <input
             class="border-0 input-text"
             type="text"
@@ -145,13 +152,29 @@
         </div>
 
         <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start input-text">Guests</span>
+          <span class="d-flex justify-content-start fw-bold input-text"
+            >Guests</span
+          >
           <input
             class="border-0 input-text"
             type="text"
             id="guests"
             placeholder="Add guests"
           />
+        </div>
+        <div
+          class="
+            col-3-lg col-md-auto
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div
+            class="search-icon d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-search"></i>
+          </div>
         </div>
       </div>
     </div>

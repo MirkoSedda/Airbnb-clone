@@ -10,10 +10,6 @@ body {
   height: 100vh;
 }
 
-.navbar-padding {
-  justify-content: space-around;
-}
-
 .badge {
   background-color: white !important;
   border-radius: 20px;
@@ -30,11 +26,20 @@ body {
 .search {
   background-color: white !important;
   border-radius: 50px;
-  width: 45%;
+  width: 55vw;
+}
+
+.search-icon {
+  margin-left: -40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: red !important;
+  color: white !important;
 }
 
 .input-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .cta {
