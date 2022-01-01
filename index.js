@@ -8,6 +8,7 @@ const input = document.querySelector('#input-field')
 const cta = document.querySelector('.cta')
 const heroImg = document.querySelector('.hero-img')
 const selectedImgs = document.querySelectorAll('.selected-img')
+const dateElement = document.querySelector('.date')
 
 const h1 = document.createElement('h1')
 
@@ -18,6 +19,7 @@ input.addEventListener('change', function () {
   h1.innerText = input.value
   cta.prepend(h1)
   background()
+  addDate()
 })
 
 // EXERCISE 2
@@ -75,29 +77,43 @@ const background = () => {
 // for every section in the homepage that has text+image and make it so
 // that every section which contains img+text gets generated in a randomized order on every page refresh.
 
-const images = () => {
-  arr = []
-  for (let i = 1; i <= 8; i++) {
-    arr.push(`/assets/homepage / e${[i]}.jpg`)
-  }
-  return arr
-}
-images()
+// const images = () => {
+//   arr = []
+//   for (let i = 1; i <= 8; i++) {
+//     arr.push(`/assets/homepage / e${[i]}.jpg`)
+//   }
+//   return arr
+// }
+// images()
 
-const randomizeIt = () => {
-  arr.sort(() => Math.random() - 0.5)
-  return arr
-}
-randomizeIt()
+// const randomizeIt = () => {
+//   arr.sort(() => Math.random() - 0.5)
+//   return arr
+// }
+// randomizeIt()
 
-const changeImg = () => {
-  console.log(selectedImgsZ)
-  for (i = 0; i < arr.length; i++) {
-    const imgPath = arr[i]
-    selectedImgs.setAttribute('src', imgPath)
-  }
-}
-changeImg(images())
+// const changeImg = arr => {
+//   console.log(selectedImgs)
+//   for (i = 0; i < arr.length; i++) {
+//     const imgItem = document.querySelector(`#img[${i}]`)
+//     console.log('hey')
+//     console.log(imgItem)
+
+//     const imgPath = arr[i]
+//     console.log(imgPath)
+//     console.log((selectedImgs.src = imgPath))
+//   }
+// }
+// changeImg(images())
+
+//  Select link with specific href string value
+// const contactLink = document.querySelector('a[href*="/contact-me"]')
+
+//  Change href string value
+// contactLink.href = '/contact-us'
+
+//  Print result
+// console.log(contactLink.href)
 //                <div class="d-flex align-items-center">
 //                 <img
 //                   src="/assets/homepage/e1.jpg"
@@ -117,6 +133,22 @@ changeImg(images())
 // Create a Date object via JavaScript and format it to have a date looking like this: "09/07/2021, 12:51:15"
 // Apply it in a <span> above the <h1> to show to the user the date and time of the search, but instead of the comma, separate the two with an em dash: — like so: "09/07/2021 — 12:51:15"
 // (you can create the em dash with a combination on the numpad that is: ALT + 0151)
+
+let today = new Date()
+let dd = String(today.getDate()).padStart(2, '0')
+let mm = String(today.getMonth() + 1).padStart(2, '0')
+let yyyy = today.getFullYear()
+let time =
+  today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+today = mm + '/' + dd + '/' + yyyy
+
+const addDate = () => {
+  dateElement.classList.add('mx-auto', 'w-50', 'text-center', 'white')
+  dateElement.innerHTML += `${today} - ${time}`
+  cta.prepend(dateElement)
+}
+
+console.log(today, time)
 
 // EXERCISE 6
 // The search fields include: Location, Check-in date, Check-out date, Number of guests. You've displayed the first one in the H1 field on EX 1 already.
