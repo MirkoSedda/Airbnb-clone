@@ -6,6 +6,7 @@
 
 const input = document.querySelector('#input-field')
 const cta = document.querySelector('.cta')
+const heroImg = document.querySelector('.hero-img')
 const h1 = document.createElement('h1')
 
 //document.createElement('div').prepend(span)
@@ -14,6 +15,7 @@ input.addEventListener('change', function () {
   h1.classList.add('mx-auto', 'w-50', 'text-center', 'white')
   h1.innerText = input.value
   cta.prepend(h1)
+  background()
 })
 
 // EXERCISE 2
@@ -38,7 +40,7 @@ const cities = [
   },
   {
     city: 'Sinaloa',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    img: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/4b/5a/d6/nuestro-pueblo-magico.jpg?w=500&h=300&s=1',
   },
   {
     city: 'Bangkok',
@@ -48,6 +50,15 @@ const cities = [
 
 // EXERCISE 3
 // We want to display the picture of the corresponding searched city as the new background of the hero section.
+
+const background = () => {
+  const input = document.querySelector('#input-field').value
+  for (let i = 0; i < cities.length; i++) {
+    if (input === cities[i].city) {
+      heroImg.style.backgroundImage = `url(${cities[i].img})`
+    }
+  }
+}
 
 // In the same place you took the input value, use -at the same time- a for loop to perform a check
 // on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).

@@ -24,729 +24,749 @@
 
   <body>
     <!-- Hero section  -->
-    <div class="hero-section">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg text-light">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="me">
-            <a class="navbar-brand" href="#">
-              <img
-                src="/assets/homepage/logo.svg"
-                alt=""
-                width="100"
-                height="100"
-                class="logo d-inline-block"
-              />
-            </a>
-          </div>
+    <div class="hero-img">
+      <div class="hero-section">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg text-light">
+          <div class="container-fluid d-flex justify-content-around">
+            <div class="me">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="/assets/homepage/logo.svg"
+                  alt=""
+                  width="100"
+                  height="100"
+                  class="logo d-inline-block"
+                />
+              </a>
+            </div>
 
-          <button
-            class="navbar-toggler"
-            +
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button
+              class="navbar-toggler"
+              +
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-3">
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Places"
-                    >Places to stay</a
-                  >
-                </li>
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Experiences"
-                    >Experiences</a
-                  >
-                </li>
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Online"
-                    >Online Experiences</a
-                  >
-                </li>
-              </ul>
+            <div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-3">
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Places"
+                      >Places to stay</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Experiences"
+                      >Experiences</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Online"
+                      >Online Experiences</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >Become a host</a
+              >
+              <i class="icon2 bi bi-globe2 align-middle me-3"></i>
+              <span class="badge badge-pill text-dark p-2">
+                <i class="icon bi bi-list mx-2"></i>
+                <i class="icon bi bi-person-circle mx-2"></i>
+              </span>
             </div>
           </div>
+        </nav>
+      </div>
 
-          <div class="d-flex justify-content-center align-items-center">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >Become a host</a
+      <!-- Search bar -->
+      <div
+        class="
+          container-xl
+          d-flex d-none d-xl-block
+          search
+          bg-light
+          text-dark
+          justify-content-center
+          align-items-center
+          p-2
+        "
+      >
+        <div class="row">
+          <div class="col-3-lg col-md-auto">
+            <span class="d-flex justify-content-start fw-bold input-text"
+              >Location</span
             >
-            <i class="icon2 bi bi-globe2 align-middle me-3"></i>
-            <span class="badge badge-pill text-dark p-2">
-              <i class="icon bi bi-list mx-2"></i>
-              <i class="icon bi bi-person-circle mx-2"></i>
-            </span>
+            <input
+              class="border-0 input-text"
+              type="text"
+              aria-label="Location"
+              class="form-control"
+              id="input-field"
+              placeholder="Where are you going?"
+            />
+          </div>
+
+          <div class="col-3-lg col-md-auto">
+            <span class="d-flex justify-content-start fw-bold input-text"
+              >Check-in</span
+            >
+            <input
+              class="border-0 input-text"
+              type="text"
+              aria-label="Check-in"
+              id="check-in"
+              placeholder="Add dates"
+            />
+          </div>
+
+          <div class="col-3-lg col-md-auto">
+            <span class="d-flex justify-content-start fw-bold input-text"
+              >Check-out</span
+            >
+            <input
+              class="border-0 input-text"
+              type="text"
+              aria-label="Check-out"
+              id="check-out"
+              placeholder="Add dates"
+            />
+          </div>
+
+          <div class="col-3-lg col-md-auto">
+            <span class="d-flex justify-content-start fw-bold input-text"
+              >Guests</span
+            >
+            <input
+              class="border-0 input-text"
+              type="text"
+              id="guests"
+              placeholder="Add guests"
+            />
+          </div>
+          <div
+            class="
+              col-3-lg col-md-auto
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <div
+              class="
+                search-icon
+                d-flex
+                align-items-center
+                justify-content-center
+              "
+            >
+              <i class="bi bi-search"></i>
+            </div>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
 
-    <!-- Search bar -->
-    <div
-      class="
-        container-xl
-        d-flex d-none d-xl-block
-        search
-        bg-light
-        text-dark
-        justify-content-center
-        align-items-center
-        p-2
-      "
-    >
-      <div class="row">
-        <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start fw-bold input-text"
-            >Location</span
-          >
-          <input
-            class="border-0 input-text"
-            type="text"
-            aria-label="Location"
-            class="form-control"
-            id="input-field"
-            placeholder="Where are you going?"
-          />
-        </div>
-
-        <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start fw-bold input-text"
-            >Check-in</span
-          >
-          <input
-            class="border-0 input-text"
-            type="text"
-            aria-label="Check-in"
-            id="check-in"
-            placeholder="Add dates"
-          />
-        </div>
-
-        <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start fw-bold input-text"
-            >Check-out</span
-          >
-          <input
-            class="border-0 input-text"
-            type="text"
-            aria-label="Check-out"
-            id="check-out"
-            placeholder="Add dates"
-          />
-        </div>
-
-        <div class="col-3-lg col-md-auto">
-          <span class="d-flex justify-content-start fw-bold input-text"
-            >Guests</span
-          >
-          <input
-            class="border-0 input-text"
-            type="text"
-            id="guests"
-            placeholder="Add guests"
-          />
-        </div>
-        <div
+      <!-- Call to action content  -->
+      <div class="container-lg cta">
+        <h1 class="h3 center1 text-dark">Not sure where to go? Perfect.</h1>
+        <h2
           class="
-            col-3-lg col-md-auto
-            d-flex
-            align-items-center
-            justify-content-center
+            center2
+            badge
+            rounded-pill
+            py-3
+            px-5
+            fs-5
+            text-primary
+            bg-light
           "
         >
-          <div
-            class="search-icon d-flex align-items-center justify-content-center"
-          >
-            <i class="bi bi-search"></i>
+          I'm flexible
+        </h2>
+      </div>
+
+      <div class="spacer400"></div>
+
+      <!-- Explore nearby -->
+
+      <section id="Places">
+        <div class="container-lg">
+          <h2 class="h1 mb-5">Explore nearby</h2>
+
+          <div class="row mb-5">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e1.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Milan</h5>
+                  <span class="text-muted fs-6">1-hour drive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e2.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Venice</h5>
+                  <span class="text-muted fs-6">4.5-hour drive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e3.png"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Florence</h5>
+                  <span class="text-muted fs-6">4-hour drive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e4.png"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Bologna</h5>
+                  <span class="text-muted fs-6">3-hour drive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e5.png"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Turin</h5>
+                  <span class="text-muted fs-6">2.5-hour drive</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e6.png"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Verona</h5>
+                  <span class="text-muted fs-6">2.5-hour drive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e7.png"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">Genoa</h5>
+                  <span class="text-muted fs-6">3-hour drive</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/e8.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100px"
+                />
+                <div class="ms-3">
+                  <h5 class="text-bold fs-5">La Spezia</h5>
+                  <span class="text-muted fs-6">3.5-hour drive</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Call to action content  -->
-    <div class="container-lg cta">
-      <h1 class="h3 center1 text-dark">Not sure where to go? Perfect.</h1>
-      <h2
-        class="center2 badge rounded-pill py-3 px-5 fs-5 text-primary bg-light"
-      >
-        I'm flexible
-      </h2>
-    </div>
+      <div class="spacer100"></div>
 
-    <div class="spacer400"></div>
+      <!-- Live anywhere -->
+      <section>
+        <div class="container-lg">
+          <h2 class="h1 mb-5">Live anywhere</h2>
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/l1.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Outdoor getaways</h5>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/l2.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Unique stays</h5>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/l3.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Entire homes</h5>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/l4.jpg"
+                  class="rounded-3"
+                  alt="city picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Pets allowed</h5>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Explore nearby -->
+      <div class="spacer50"></div>
 
-    <section id="Places">
+      <!-- The greatest outdoor -->
+
       <div class="container-lg">
-        <h2 class="h1 mb-5">Explore nearby</h2>
-
-        <div class="row mb-5">
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e1.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Milan</h5>
-                <span class="text-muted fs-6">1-hour drive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e2.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Venice</h5>
-                <span class="text-muted fs-6">4.5-hour drive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e3.png"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Florence</h5>
-                <span class="text-muted fs-6">4-hour drive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e4.png"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Bologna</h5>
-                <span class="text-muted fs-6">3-hour drive</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e5.png"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Turin</h5>
-                <span class="text-muted fs-6">2.5-hour drive</span>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e6.png"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Verona</h5>
-                <span class="text-muted fs-6">2.5-hour drive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e7.png"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">Genoa</h5>
-                <span class="text-muted fs-6">3-hour drive</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/e8.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100px"
-              />
-              <div class="ms-3">
-                <h5 class="text-bold fs-5">La Spezia</h5>
-                <span class="text-muted fs-6">3.5-hour drive</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img
+          src="/assets/homepage/g1.jpg"
+          class="rounded-3 w-100"
+          alt="seaside picture"
+        />
       </div>
-    </section>
 
-    <div class="spacer100"></div>
+      <div class="spacer100"></div>
 
-    <!-- Live anywhere -->
-    <section>
+      <!-- Discover Experiences -->
+
+      <section id="Experiences">
+        <div class="container-lg">
+          <h2 class="h1">Discover Experiences</h2>
+          <h3 class="h4 text-muted">
+            Unique activities with local experts - in person or online
+          </h3>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/d1.jpg"
+                  class="rounded-3"
+                  alt="girl picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Outdoor collection</h5>
+              <h3 class="h6 text-muted">
+                Experiences that immerse you in nature.
+              </h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/d2.jpg"
+                  class="rounded-3"
+                  alt="girl picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Online experiences</h5>
+              <h3 class="h6 text-muted">
+                Live, interactive activities led by hosts
+              </h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="d-flex align-items-center">
+                <img
+                  src="/assets/homepage/d3.jpg"
+                  class="rounded-3"
+                  alt="girl picture"
+                  width="100%"
+                />
+              </div>
+              <h5 class="text-bold fs-5">Experiences</h5>
+              <h3 class="h6 text-muted">
+                Local things to do, wherever you are.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="spacer100"></div>
+
+      <!-- Try hosting -->
+
       <div class="container-lg">
-        <h2 class="h1 mb-5">Live anywhere</h2>
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/l1.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100%"
-              />
+        <img
+          src="/assets/homepage/t1.jpg"
+          class="rounded-3 w-100"
+          alt="seaside picture"
+        />
+      </div>
+
+      <div class="spacer100"></div>
+
+      <!-- Future getaways -->
+
+      <section id="Online">
+        <div class="container-lg">
+          <h2 class="h1 mb-4">Inspiration for future getaways</h2>
+          <span class="pe-2">Historic destinations</span>
+          <span class="px-2">Coastal destinations</span>
+          <span class="px-2">Island destinations</span>
+          <span class="px-2">Lake destinations</span>
+          <span class="ps-2">Other popular destinations</span>
+          <hr />
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Firenze <br />
+              <span class="text-muted fs-6">Italy</span>
             </div>
-            <h5 class="text-bold fs-5">Outdoor getaways</h5>
+            <div class="col-md-6 col-lg-3">
+              Madrid <br />
+              <span class="text-muted fs-6">Spain</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              New York <br />
+              <span class="text-muted fs-6">Usa</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Bali <br />
+              <span class="text-muted fs-6">Indonesia</span>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/l2.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100%"
-              />
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Tokyo <br />
+              <span class="text-muted fs-6">Japan</span>
             </div>
-            <h5 class="text-bold fs-5">Unique stays</h5>
+            <div class="col-md-6 col-lg-3">
+              Toronto <br />
+              <span class="text-muted fs-6">Canada</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Amsterdam <br />
+              <span class="text-muted fs-6">Netherland</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Danzika <br />
+              <span class="text-muted fs-6">Poland</span>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/l3.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100%"
-              />
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Moscow <br />
+              <span class="text-muted fs-6">Russia</span>
             </div>
-            <h5 class="text-bold fs-5">Entire homes</h5>
+            <div class="col-md-6 col-lg-3">
+              Beijing <br />
+              <span class="text-muted fs-6">China</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Mexico City <br />
+              <span class="text-muted fs-6">Mexico</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Lima <br />
+              <span class="text-muted fs-6">Peru</span>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/l4.jpg"
-                class="rounded-3"
-                alt="city picture"
-                width="100%"
-              />
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Cartagena <br />
+              <span class="text-muted fs-6">Colombia</span>
             </div>
-            <h5 class="text-bold fs-5">Pets allowed</h5>
+            <div class="col-md-6 col-lg-3">
+              Las Palmas <br />
+              <span class="text-muted fs-6">Spain</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Ibiza <br />
+              <span class="text-muted fs-6">Spain</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Palermo <br />
+              <span class="text-muted fs-6">Italy</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Rotterdam <br />
+              <span class="text-muted fs-6">Netherland</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Saint Petersburg <br />
+              <span class="text-muted fs-6">Italy</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Rio de Janeiro <br />
+              <span class="text-muted fs-6">Brazil</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Sucre <br />
+              <span class="text-muted fs-6">Bolivia</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Odessa <br />
+              <span class="text-muted fs-6">Czech Republic</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Madrid <br />
+              <span class="text-muted fs-6">Spagna</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Medellin <br />
+              <span class="text-muted fs-6">Colombia</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Tijuana <br />
+              <span class="text-muted fs-6">Mexico</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Los Angeles <br />
+              <span class="text-muted fs-6">Usa</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Miami <br />
+              <span class="text-muted fs-6">Usa</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Istanbul <br />
+              <span class="text-muted fs-6">Turkey</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Athens <br />
+              <span class="text-muted fs-6">Greece</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Bangkok <br />
+              <span class="text-muted fs-6">Thailand</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Pattaya <br />
+              <span class="text-muted fs-6">Thailand</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Berlin <br />
+              <span class="text-muted fs-6">Germany</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Bucharest <br />
+              <span class="text-muted fs-6">Romania</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Budapest <br />
+              <span class="text-muted fs-6">Hungary</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Caracas <br />
+              <span class="text-muted fs-6">Venezuela</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Dublin <br />
+              <span class="text-muted fs-6">Ireland</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Hanoi <br />
+              <span class="text-muted fs-6">Vietnam</span>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 col-lg-3">
+              Helsinki <br />
+              <span class="text-muted fs-6">Finland</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              London <br />
+              <span class="text-muted fs-6">UK</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Monaco <br />
+              <span class="text-muted fs-6">Monaco</span>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              Nassau <br />
+              <span class="text-muted fs-6">Bahamas</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="spacer50"></div>
+      <!-- Footer links -->
 
-    <!-- The greatest outdoor -->
+      <div class="spacer50"></div>
+      <hr />
 
-    <div class="container-lg">
-      <img
-        src="/assets/homepage/g1.jpg"
-        class="rounded-3 w-100"
-        alt="seaside picture"
-      />
+      <section>
+        <div class="container-lg mb-5">
+          <div class="row mt-5 mb-3">
+            <div class="col fw-bold">ABOUT</div>
+            <div class="col fw-bold">COMMUNITY</div>
+            <div class="col fw-bold">HOST</div>
+            <div class="col fw-bold">SUPPORT</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">How Airbnb works</div>
+            <div class="col">Diversity and belonging</div>
+            <div class="col">Host your home</div>
+            <div class="col">Help centre</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">News room</div>
+            <div class="col">Accessibility</div>
+            <div class="col">Host an Online Experience</div>
+            <div class="col">Cancellation options</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">Airbnb 2021</div>
+            <div class="col">Airbnb associates</div>
+            <div class="col">Host an experience</div>
+            <div class="col">Neighborhood support</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">Investors</div>
+            <div class="col">Frontline stays</div>
+            <div class="col">Responsible hosting</div>
+            <div class="col">Trust & safety</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">Airbnb luxe</div>
+            <div class="col">Guest referrals</div>
+            <div class="col">Resource centre</div>
+            <div class="col">Community centre</div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">Hotel tonight</div>
+            <div class="col">Airbnb.org</div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+          <div class="row mb-1 fs-6">
+            <div class="col">Careers</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+        </div>
+      </section>
+      <hr />
+
+      <!-- Footer -->
+
+      <footer>
+        <div class="container-lg d-flex justify-content-between">
+          <div class="left">
+            <i class="fa fa-copyright"></i>
+            <span class="text-black">2022 Airbnb, Inc</span>
+            <i class="bi bi-dot"></i>
+            <a class="text-decoration-none text-black" href="#">Privacy</a>
+            <i class="bi bi-dot"></i>
+            <a class="text-decoration-none text-black" href="#">Terms</a>
+            <i class="bi bi-dot"></i>
+            <a class="text-decoration-none text-black" href="#">Sitemap</a>
+            <i class="bi bi-dot"></i>
+            <a class="text-decoration-none text-black" href="#"
+              >UK Modern Slavery Act</a
+            >
+            <i class="bi bi-dot"></i>
+            <a class="text-decoration-none text-black" href="#"
+              >Company details</a
+            >
+          </div>
+          <div class="right">
+            <i class="icon2 bi bi-globe2 align-middle"></i>
+            <a class="text-decoration-none text-black me-3" href="#"
+              >English/(GB)</a
+            >
+            <a class="text-decoration-none text-black" href="#">£ </a>
+            <a class="text-decoration-underline text-black me-5" href="#"
+              >GBP</a
+            >
+            <i class="mx-2 bi bi-facebook"></i>
+            <i class="mx-2 bi bi-twitter"></i>
+            <i class="mx-2 bi bi-instagram"></i>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <div class="spacer100"></div>
-
-    <!-- Discover Experiences -->
-
-    <section id="Experiences">
-      <div class="container-lg">
-        <h2 class="h1">Discover Experiences</h2>
-        <h3 class="h4 text-muted">
-          Unique activities with local experts - in person or online
-        </h3>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/d1.jpg"
-                class="rounded-3"
-                alt="girl picture"
-                width="100%"
-              />
-            </div>
-            <h5 class="text-bold fs-5">Outdoor collection</h5>
-            <h3 class="h6 text-muted">
-              Experiences that immerse you in nature.
-            </h3>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/d2.jpg"
-                class="rounded-3"
-                alt="girl picture"
-                width="100%"
-              />
-            </div>
-            <h5 class="text-bold fs-5">Online experiences</h5>
-            <h3 class="h6 text-muted">
-              Live, interactive activities led by hosts
-            </h3>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="d-flex align-items-center">
-              <img
-                src="/assets/homepage/d3.jpg"
-                class="rounded-3"
-                alt="girl picture"
-                width="100%"
-              />
-            </div>
-            <h5 class="text-bold fs-5">Experiences</h5>
-            <h3 class="h6 text-muted">Local things to do, wherever you are.</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="spacer100"></div>
-
-    <!-- Try hosting -->
-
-    <div class="container-lg">
-      <img
-        src="/assets/homepage/t1.jpg"
-        class="rounded-3 w-100"
-        alt="seaside picture"
-      />
-    </div>
-
-    <div class="spacer100"></div>
-
-    <!-- Future getaways -->
-
-    <section id="Online">
-      <div class="container-lg">
-        <h2 class="h1 mb-4">Inspiration for future getaways</h2>
-        <span class="pe-2">Historic destinations</span>
-        <span class="px-2">Coastal destinations</span>
-        <span class="px-2">Island destinations</span>
-        <span class="px-2">Lake destinations</span>
-        <span class="ps-2">Other popular destinations</span>
-        <hr />
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Firenze <br />
-            <span class="text-muted fs-6">Italy</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Madrid <br />
-            <span class="text-muted fs-6">Spain</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            New York <br />
-            <span class="text-muted fs-6">Usa</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Bali <br />
-            <span class="text-muted fs-6">Indonesia</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Tokyo <br />
-            <span class="text-muted fs-6">Japan</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Toronto <br />
-            <span class="text-muted fs-6">Canada</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Amsterdam <br />
-            <span class="text-muted fs-6">Netherland</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Danzika <br />
-            <span class="text-muted fs-6">Poland</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Moscow <br />
-            <span class="text-muted fs-6">Russia</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Beijing <br />
-            <span class="text-muted fs-6">China</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Mexico City <br />
-            <span class="text-muted fs-6">Mexico</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Lima <br />
-            <span class="text-muted fs-6">Peru</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Cartagena <br />
-            <span class="text-muted fs-6">Colombia</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Las Palmas <br />
-            <span class="text-muted fs-6">Spain</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Ibiza <br />
-            <span class="text-muted fs-6">Spain</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Palermo <br />
-            <span class="text-muted fs-6">Italy</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Rotterdam <br />
-            <span class="text-muted fs-6">Netherland</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Saint Petersburg <br />
-            <span class="text-muted fs-6">Italy</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Rio de Janeiro <br />
-            <span class="text-muted fs-6">Brazil</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Sucre <br />
-            <span class="text-muted fs-6">Bolivia</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Odessa <br />
-            <span class="text-muted fs-6">Czech Republic</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Madrid <br />
-            <span class="text-muted fs-6">Spagna</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Medellin <br />
-            <span class="text-muted fs-6">Colombia</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Tijuana <br />
-            <span class="text-muted fs-6">Mexico</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Los Angeles <br />
-            <span class="text-muted fs-6">Usa</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Miami <br />
-            <span class="text-muted fs-6">Usa</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Istanbul <br />
-            <span class="text-muted fs-6">Turkey</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Athens <br />
-            <span class="text-muted fs-6">Greece</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Bangkok <br />
-            <span class="text-muted fs-6">Thailand</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Pattaya <br />
-            <span class="text-muted fs-6">Thailand</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Berlin <br />
-            <span class="text-muted fs-6">Germany</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Bucharest <br />
-            <span class="text-muted fs-6">Romania</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Budapest <br />
-            <span class="text-muted fs-6">Hungary</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Caracas <br />
-            <span class="text-muted fs-6">Venezuela</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Dublin <br />
-            <span class="text-muted fs-6">Ireland</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Hanoi <br />
-            <span class="text-muted fs-6">Vietnam</span>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-md-6 col-lg-3">
-            Helsinki <br />
-            <span class="text-muted fs-6">Finland</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            London <br />
-            <span class="text-muted fs-6">UK</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Monaco <br />
-            <span class="text-muted fs-6">Monaco</span>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            Nassau <br />
-            <span class="text-muted fs-6">Bahamas</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer links -->
-
-    <div class="spacer50"></div>
-    <hr />
-
-    <section>
-      <div class="container-lg mb-5">
-        <div class="row mt-5 mb-3">
-          <div class="col fw-bold">ABOUT</div>
-          <div class="col fw-bold">COMMUNITY</div>
-          <div class="col fw-bold">HOST</div>
-          <div class="col fw-bold">SUPPORT</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">How Airbnb works</div>
-          <div class="col">Diversity and belonging</div>
-          <div class="col">Host your home</div>
-          <div class="col">Help centre</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">News room</div>
-          <div class="col">Accessibility</div>
-          <div class="col">Host an Online Experience</div>
-          <div class="col">Cancellation options</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">Airbnb 2021</div>
-          <div class="col">Airbnb associates</div>
-          <div class="col">Host an experience</div>
-          <div class="col">Neighborhood support</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">Investors</div>
-          <div class="col">Frontline stays</div>
-          <div class="col">Responsible hosting</div>
-          <div class="col">Trust & safety</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">Airbnb luxe</div>
-          <div class="col">Guest referrals</div>
-          <div class="col">Resource centre</div>
-          <div class="col">Community centre</div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">Hotel tonight</div>
-          <div class="col">Airbnb.org</div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-        <div class="row mb-1 fs-6">
-          <div class="col">Careers</div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-      </div>
-    </section>
-    <hr />
-
-    <!-- Footer -->
-
-    <footer>
-      <div class="container-lg d-flex justify-content-between">
-        <div class="left">
-          <i class="fa fa-copyright"></i>
-          <span class="text-black">2022 Airbnb, Inc</span>
-          <i class="bi bi-dot"></i>
-          <a class="text-decoration-none text-black" href="#">Privacy</a>
-          <i class="bi bi-dot"></i>
-          <a class="text-decoration-none text-black" href="#">Terms</a>
-          <i class="bi bi-dot"></i>
-          <a class="text-decoration-none text-black" href="#">Sitemap</a>
-          <i class="bi bi-dot"></i>
-          <a class="text-decoration-none text-black" href="#"
-            >UK Modern Slavery Act</a
-          >
-          <i class="bi bi-dot"></i>
-          <a class="text-decoration-none text-black" href="#"
-            >Company details</a
-          >
-        </div>
-        <div class="right">
-          <i class="icon2 bi bi-globe2 align-middle"></i>
-          <a class="text-decoration-none text-black me-3" href="#"
-            >English/(GB)</a
-          >
-          <a class="text-decoration-none text-black" href="#">£ </a>
-          <a class="text-decoration-underline text-black me-5" href="#">GBP</a>
-          <i class="mx-2 bi bi-facebook"></i>
-          <i class="mx-2 bi bi-twitter"></i>
-          <i class="mx-2 bi bi-instagram"></i>
-        </div>
-      </div>
-    </footer>
 
     <!-- HTML & CSS EXERCISES -->
 
