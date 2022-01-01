@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+.navbar-padding {
+  justify-content: space-around;
+}
+
 .badge {
   background-color: white !important;
   border-radius: 20px;
@@ -26,6 +30,11 @@ body {
 .search {
   background-color: white !important;
   border-radius: 50px;
+  width: 45%;
+}
+
+.input-text {
+  font-size: 10px;
 }
 
 .cta {
@@ -78,4 +87,8 @@ body {
 .text-black {
   color: black;
   font-size: 12px;
+}
+
+.right {
+  margin-right: 60px;
 }
