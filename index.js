@@ -3,6 +3,47 @@
 // EXERCISE 1
 // Take the value from the city input field and display it in an H1 on the center of the Hero content, on top of the image.
 // The letters should appear one by one while the user types them in the input.
+// We also want to display the picture of the corresponding searched city as the new background of the hero section.
+// In the same place you took the input value, use -at the same time- a for loop to perform a check
+// on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
+// Check if the searched city is found in any object in the array.
+// If it's found, use the img property as the new source for the background image of the hero section.
+// What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
+
+const cities = [
+  {
+    city: 'Milan',
+    img: `https://www.yesmilano.it/sites/default/files/2020-06/Panorama%20Milano%20Foto%20Getty%201280x560px.png`,
+  },
+  {
+    city: 'Venice',
+    img: '/assets/homepage/e2.jpg',
+  },
+  {
+    city: 'Florence',
+    img: '/assets/homepage/e3.jpg',
+  },
+  {
+    city: 'Bologna',
+    img: '/assets/homepage/e4.jpg',
+  },
+  {
+    city: 'Turin',
+    img: '/assets/homepage/e5.jpg',
+  },
+  {
+    city: 'Verona',
+    img: '/assets/homepage/e6.jpg',
+  },
+  {
+    city: 'Genova',
+    img: '/assets/homepage/e7.jpg',
+  },
+  {
+    city: 'La Spezia',
+    img: '/assets/homepage/e8.jpg',
+  },
+]
 
 const input = document.querySelector('#input-field')
 const cta = document.querySelector('.cta')
@@ -10,72 +51,96 @@ const heroImg = document.querySelector('.hero-img')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
 
-const h1 = document.createElement('h1')
+const changeBackground = () => {
+  const h1 = document.createElement('h1')
 
-//document.createElement('div').prepend(span)
+  input.addEventListener('change', function () {
+    const inputValue = document.querySelector('#input-field').value
+    h1.classList.add('mx-auto', 'w-50', 'text-center', 'white')
+    h1.innerText = input.value
+    cta.prepend(h1)
 
-input.addEventListener('change', function () {
-  h1.classList.add('mx-auto', 'w-50', 'text-center', 'white')
-  h1.innerText = input.value
-  cta.prepend(h1)
-  background()
-  addDate()
-})
+    for (let i = 0; i < cities.length; i++) {
+      if (inputValue === cities[i].city) {
+        heroImg.style.backgroundImage = `url(${cities[i].img})`
+      }
+    }
+    addDate()
+  })
+}
+changeBackground()
 
 // EXERCISE 2
 // Create an array of objects for each city you can think of. Each one should look like the following:
 
-const cities = [
+const citiesLogos = [
   {
-    city: 'Barcelona',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    city: 'Milan',
+    img: '/assets/homepage/e1.jpg',
   },
   {
-    city: 'Rome',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    city: 'Venice',
+    img: '/assets/homepage/e2.jpg',
   },
   {
-    city: 'Amsterdam',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    city: 'Florence',
+    img: '/assets/homepage/e3.jpg',
   },
   {
-    city: 'Cartagena',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    city: 'Bologna',
+    img: '/assets/homepage/e4.jpg',
   },
   {
-    city: 'Sinaloa',
-    img: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/4b/5a/d6/nuestro-pueblo-magico.jpg?w=500&h=300&s=1',
+    city: 'Turin',
+    img: '/assets/homepage/e5.jpg',
   },
   {
-    city: 'Bangkok',
-    img: 'https://itk.ppke.hu/get/images/2078419/spanyolorsz%C3%A1g.jpg',
+    city: 'Verona',
+    img: '/assets/homepage/e6.jpg',
+  },
+  {
+    city: 'Genova',
+    img: '/assets/homepage/e7.jpg',
+  },
+  {
+    city: 'La Spezia',
+    img: '/assets/homepage/e8.jpg',
   },
 ]
 
-// EXERCISE 3
-// We want to display the picture of the corresponding searched city as the new background of the hero section.
-
-// In the same place you took the input value, use -at the same time- a for loop to perform a check
-// on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
-
-// Check if the searched city is found in any object in the array.
-// If it's found, use the img property as the new source for the background image of the hero section.
-
-// What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
-
-const background = () => {
-  const input = document.querySelector('#input-field').value
-  for (let i = 0; i < cities.length; i++) {
-    if (input === cities[i].city) {
-      heroImg.style.backgroundImage = `url(${cities[i].img})`
-    }
-  }
-}
+// const background = () => {
+//   const input = document.querySelector('#input-field').value
+//   for (let i = 0; i < cities.length; i++) {
+//     if (input === cities[i].city) {
+//       heroImg.style.backgroundImage = `url(${cities[i].img})`
+//     }
+//   }
+// }
 
 // EXERCISE 4
 // create new arrays with similar structure [{img: "http://...", text: "lorem ipsum"}, {...}, {...}]
 // for every section in the homepage that has text+image and make it so
 // that every section which contains img+text gets generated in a randomized order on every page refresh.
+
+const shuffledCities = citiesLogos => {
+  citiesLogos.sort(() => Math.random() - 0.5)
+  return citiesLogos
+}
+shuffledCities(citiesLogos)
+console.log(shuffledCities(citiesLogos))
+
+//  <div class="d-flex align-items-center">
+//     <img
+//       src="/assets/homepage/e1.jpg"
+//       class="rounded-3"
+//       alt="city picture"
+//       width="100px"
+//     />
+//     <div class="ms-3">
+//       <h5 class="text-bold fs-5">Milan</h5>
+//       <span class="text-muted fs-6">1-hour drive</span>
+//     </div>
+//   </div >
 
 // const images = () => {
 //   arr = []
@@ -85,12 +150,6 @@ const background = () => {
 //   return arr
 // }
 // images()
-
-// const randomizeIt = () => {
-//   arr.sort(() => Math.random() - 0.5)
-//   return arr
-// }
-// randomizeIt()
 
 // const changeImg = arr => {
 //   console.log(selectedImgs)
@@ -105,27 +164,6 @@ const background = () => {
 //   }
 // }
 // changeImg(images())
-
-//  Select link with specific href string value
-// const contactLink = document.querySelector('a[href*="/contact-me"]')
-
-//  Change href string value
-// contactLink.href = '/contact-us'
-
-//  Print result
-// console.log(contactLink.href)
-//                <div class="d-flex align-items-center">
-//                 <img
-//                   src="/assets/homepage/e1.jpg"
-//                   class="rounded-3"
-//                   alt="city picture"
-//                   width="100px"
-//                 />
-//                 <div class="ms-3">
-//                   <h5 class="text-bold fs-5">Milan</h5>
-//                   <span class="text-muted fs-6">1-hour drive</span>
-//                 </div>
-//               </div>
 
 // EXERCISE 5
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
