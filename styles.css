@@ -2,12 +2,16 @@
   outline: none;
 }
 
-body {
+.hero-img {
   background-image: url('/assets/homepage/img1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+.hero-section {
+  z-index: 10;
 }
 
 .badge {

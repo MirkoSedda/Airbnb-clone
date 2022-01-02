@@ -50,41 +50,44 @@ const cta = document.querySelector('.cta')
 const heroImg = document.querySelector('.hero-img')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
-
-// const changeBackground = () => {
-//   input.addEventListener('change', function () {
-//     const inputValue = document.querySelector('#input-field').value
-
-//     for (let i = 0; i < cities.length; i++) {
-//       if (inputValue === cities[i].city) {
-//         heroImg.innerHTML += `<img style="background-image: url('${cities[i].img}');background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;"/>`
-//       }
-//     }
-//     addDate()
-//   })
-// }
-// changeBackground()
-
-//the code works but the image needs to not repeat..
+const heroImgId = document.querySelector('#hero-img')
 
 const changeBackground = () => {
-  const h1 = document.createElement('h1')
-
   input.addEventListener('change', function () {
     const inputValue = document.querySelector('#input-field').value
-    h1.classList.add('mx-auto', 'w-50', 'text-center', 'white')
-    h1.innerText = input.value
-    cta.prepend(h1)
 
     for (let i = 0; i < cities.length; i++) {
       if (inputValue === cities[i].city) {
-        heroImg.style.backgroundImage = `url(${cities[i].img})`
+        heroImg.innerHTML = `<img src='${cities[i].img}' style="z-index:1;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;" />
+        
+        `
       }
     }
     addDate()
   })
 }
 changeBackground()
+//style="background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;"
+//the code works but the image needs to not repeat..
+
+// const changeBackground = () => {
+//   const h1 = document.createElement('h1')
+
+//   input.addEventListener('change', function () {
+//     const inputValue = document.querySelector('#input-field').value
+//     h1.classList.add('mx-auto', 'w-50', 'text-center', 'white')
+//     h1.innerText = input.value
+//     cta.prepend(h1)
+
+//     for (let i = 0; i < cities.length; i++) {
+//       if (inputValue === cities[i].city) {
+//         heroImg.style.backgroundImage = `url(${cities[i].img})`
+//       }
+//     }
+//     addDate()
+//   })
+// }
+// changeBackground()
 
 // EXERCISE 2
 // Create an array of objects for each city you can think of. Each one should look like the following:
@@ -134,7 +137,7 @@ const shuffledCities = citiesLogos => {
   return citiesLogos
 }
 shuffledCities(citiesLogos)
-console.log(shuffledCities(citiesLogos))
+//console.log(shuffledCities(citiesLogos))
 
 //  <div class="d-flex align-items-center">
 //     <img
@@ -193,7 +196,7 @@ const addDate = () => {
   cta.prepend(dateElement)
 }
 
-console.log(today, time)
+//console.log(today, time)
 
 // EXERCISE 6
 // The search fields include: Location, Check-in date, Check-out date, Number of guests. You've displayed the first one in the H1 field on EX 1 already.
