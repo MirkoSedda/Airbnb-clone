@@ -26,11 +26,17 @@ body {
 .search {
   background-color: white !important;
   border-radius: 50px;
-  width: 55vw;
+  min-width: 47vw;
+  max-width: 55vw;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: nowrap !important;
 }
 
 .search-icon {
-  margin-left: -40px;
+  margin-left: -60px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
