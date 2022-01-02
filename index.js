@@ -51,6 +51,22 @@ const heroImg = document.querySelector('.hero-img')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
 
+// const changeBackground = () => {
+//   input.addEventListener('change', function () {
+//     const inputValue = document.querySelector('#input-field').value
+
+//     for (let i = 0; i < cities.length; i++) {
+//       if (inputValue === cities[i].city) {
+//         heroImg.innerHTML += `<img style="background-image: url('${cities[i].img}');background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;"/>`
+//       }
+//     }
+//     addDate()
+//   })
+// }
+// changeBackground()
+
+//the code works but the image needs to not repeat..
+
 const changeBackground = () => {
   const h1 = document.createElement('h1')
 
@@ -107,15 +123,6 @@ const citiesLogos = [
     img: '/assets/homepage/e8.jpg',
   },
 ]
-
-// const background = () => {
-//   const input = document.querySelector('#input-field').value
-//   for (let i = 0; i < cities.length; i++) {
-//     if (input === cities[i].city) {
-//       heroImg.style.backgroundImage = `url(${cities[i].img})`
-//     }
-//   }
-// }
 
 // EXERCISE 4
 // create new arrays with similar structure [{img: "http://...", text: "lorem ipsum"}, {...}, {...}]
