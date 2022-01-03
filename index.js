@@ -14,34 +14,42 @@ const cities = [
   {
     city: 'Milan',
     img: '/assets/homepage/e1.jpg',
+    time: '1 hour',
   },
   {
     city: 'Venice',
     img: '/assets/homepage/e2.jpg',
+    time: '1.5-hour',
   },
   {
     city: 'Florence',
     img: '/assets/homepage/e3.jpg',
+    time: '2-hour',
   },
   {
     city: 'Bologna',
     img: '/assets/homepage/e4.jpg',
+    time: '2.5-hour',
   },
   {
     city: 'Turin',
     img: '/assets/homepage/e5.jpg',
+    time: '3-hour',
   },
   {
     city: 'Verona',
     img: '/assets/homepage/e6.jpg',
+    time: '3.5-hour',
   },
   {
     city: 'Genova',
     img: '/assets/homepage/e7.jpg',
+    time: '4-hour',
   },
   {
     city: 'La Spezia',
     img: '/assets/homepage/e8.jpg',
+    time: '4.5-hour',
   },
 ]
 
@@ -128,7 +136,7 @@ const randomizeOne = () => {
       />
       <div class="ms-3">
         <h5 class="text-bold fs-5">${cities[i].city}</h5>
-        <span class="text-muted fs-6">1-hour drive</span>
+        <span class="text-muted fs-6">${cities[i].time}</span>
       </div>
     </div>
   </div>
@@ -152,7 +160,7 @@ const randomizeTwo = () => {
       />
       <div class="ms-3">
         <h5 class="text-bold fs-5">${cities[i + 4].city}</h5>
-        <span class="text-muted fs-6">1-hour drive</span>
+        <span class="text-muted fs-6">${cities[i + 4].time}</span>
       </div>
     </div>
   </div>
