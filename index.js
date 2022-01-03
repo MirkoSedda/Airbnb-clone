@@ -137,25 +137,27 @@ const randomizeOne = () => {
 randomizeOne()
 
 const randomizeTwo = () => {
-  for (let i = 1; i <= 4; i++) {
-    randomTwo.innerHTML += ` 
-  <div class="col">
-  <div class="d-flex align-items-center">
-    <img
-      src="/assets/homepage/e${i}.jpg"
-      class="rounded-3 selected-img"
-      id="img${i}"
-      alt="city picture"
-      width="100px"
-    />
-    <div class="ms-3">
-      <h5 class="text-bold fs-5">Milan</h5>
-      <span class="text-muted fs-6">1-hour drive</span>
-    </div>
-  </div>
-</div>
-  `
-  }
+  let arr = [1, 2, 3, 4].sort(() => Math.random() - 0.5)
+  console.log(arr)
+  // for (let i = 1; i <= 4; i++) {
+  //   randomTwo.innerHTML += `
+  //     <div class="col">
+  //     <div class="d-flex align-items-center">
+  //       <img
+  //         src="/assets/homepage/e${arr[i]}.jpg"
+  //         class="rounded-3 selected-img"
+  //         id="img${arr[i]}"
+  //         alt="city picture"
+  //         width="100px"
+  //       />
+  //       <div class="ms-3">
+  //         <h5 class="text-bold fs-5">Milan</h5>
+  //         <span class="text-muted fs-6">1-hour drive</span>
+  //       </div>
+  //     </div>
+  //   </div>
+  //     `
+  // }
 }
 randomizeTwo()
 
