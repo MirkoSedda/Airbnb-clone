@@ -105,7 +105,7 @@ const changeBackground = () => {
     }
   })
 }
-changeBackground()
+//changeBackground()
 
 /*EXERCISE 2
 Create an array of objects for each city you can think of. Each one should look like the following:
@@ -194,15 +194,12 @@ today = mm + '/' + dd + '/' + yyyy
 //      Check out: 30/07/2021
 // - and the number of guests the user have selected in another list item.
 //      Guests: 2
-
-cta.prepend(bookingList)
-
+const searchIcon = document.querySelector('.search-icon')
 const click = () => {
   const bookingList = document.createElement('ul')
   const checkIn = document.getElementById('check-in')
   const checkOut = document.getElementById('check-out')
   const guests = document.getElementById('guests')
-  const searchIcon = document.querySelector('search-icon')
 
   const checkInItem = document.createElement('li')
   const checkOutItem = document.createElement('li')
@@ -215,7 +212,11 @@ const click = () => {
   bookingList.appendChild(checkInItem)
   bookingList.appendChild(checkOutItem)
   bookingList.appendChild(guestsItem)
+  cta.prepend(bookingList)
+  console.log('anything')
 }
+
+searchIcon.addEventListener('click', click())
 
 // const booking = `  <ul class="list-group">
 //     <li class="list-group-item">An item</li>
