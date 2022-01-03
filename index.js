@@ -52,7 +52,8 @@ const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
 const jsContent = document.querySelector('.js-content')
-
+const randomOne = document.querySelector('.random-one')
+const randomTwo = document.querySelector('.random-two')
 // legacy method
 // const changeBackground = () => {
 //   input.addEventListener('change', function () {
@@ -111,28 +112,68 @@ const shuffledCities = cities => {
   return cities
 }
 shuffledCities(cities)
-console.log(shuffledCities(cities))
 
-const images = () => {
-  arr = []
-  for (let i = 1; i <= 8; i++) {
-    arr.push(`/assets/homepage/e${[i]}.jpg`)
+const randomizeOne = () => {
+  for (let i = 1; i <= 4; i++) {
+    randomOne.innerHTML += ` 
+  <div class="col">
+  <div class="d-flex align-items-center">
+    <img
+      src="/assets/homepage/e${i}.jpg"
+      class="rounded-3 selected-img"
+      id="img${i}"
+      alt="city picture"
+      width="100px"
+    />
+    <div class="ms-3">
+      <h5 class="text-bold fs-5">Milan</h5>
+      <span class="text-muted fs-6">1-hour drive</span>
+    </div>
+  </div>
+</div>
+  `
   }
-  return arr
 }
-images()
+randomizeOne()
 
-console.log(images())
-
-const changeImg = arr => {
-  console.log(selectedImgs)
-  for (i = 0; i < arr.length; i++) {
-    const imgItem = document.querySelector(`#img${i}`)
-    const imgPath = arr[i]
-    console.log((selectedImgs.src = imgPath))
+const randomizeTwo = () => {
+  for (let i = 1; i <= 4; i++) {
+    randomTwo.innerHTML += ` 
+  <div class="col">
+  <div class="d-flex align-items-center">
+    <img
+      src="/assets/homepage/e${i}.jpg"
+      class="rounded-3 selected-img"
+      id="img${i}"
+      alt="city picture"
+      width="100px"
+    />
+    <div class="ms-3">
+      <h5 class="text-bold fs-5">Milan</h5>
+      <span class="text-muted fs-6">1-hour drive</span>
+    </div>
+  </div>
+</div>
+  `
   }
 }
-changeImg(images())
+randomizeTwo()
+
+// <div class="col random">
+//   <div class="d-flex align-items-center">
+//     <img
+//       src="/assets/homepage/e1.jpg"
+//       class="rounded-3 selected-img"
+//       id="img1"
+//       alt="city picture"
+//       width="100px"
+//     />
+//     <div class="ms-3">
+//       <h5 class="text-bold fs-5">Milan</h5>
+//       <span class="text-muted fs-6">1-hour drive</span>
+//     </div>
+//   </div>
+// </div>
 
 /*EXERCISE 4
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
@@ -173,3 +214,25 @@ today = mm + '/' + dd + '/' + yyyy
 // Display an alert when the time is up.
 
 // Find a way to reuse the same modal with different information passed in, instead of creating multiple modals with different IDs.
+// const images = () => {
+//   arr = []
+//   for (let i = 1; i <= 8; i++) {
+//     arr.push(`/assets/homepage/e${[i]}.jpg`)
+//   }
+//   return arr
+// }
+// images()
+
+// console.log(images())
+
+// const changeImg = arr => {
+//   console.log(selectedImgs)
+//   for (i = 0; i < arr.length; i++) {
+//     const imgItem = document.querySelector(`#img${i}`)
+//     //const newImg
+
+//     const imgPath = arr[i]
+//     console.log(imgItem)
+//   }
+// }
+// changeImg(images())
