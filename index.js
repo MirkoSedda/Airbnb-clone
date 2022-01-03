@@ -13,7 +13,7 @@
 const cities = [
   {
     city: 'Milan',
-    img: `https://www.yesmilano.it/sites/default/files/2020-06/Panorama%20Milano%20Foto%20Getty%201280x560px.png`,
+    img: '/assets/homepage/e1.jpg',
   },
   {
     city: 'Venice',
@@ -45,28 +45,39 @@ const cities = [
   },
 ]
 
+const body = document.querySelector('body')
+const mainSection = document.querySelector('.main-section')
 const input = document.querySelector('#input-field')
-const cta = document.querySelector('.cta')
-const heroImg = document.querySelector('.hero-img')
+const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
-const heroImgId = document.querySelector('#hero-img')
+console.log(body)
+// mainSection.style.backgroundImage =
+//   'url(`/assets/homepage/e1.jpg`)'
+// mainSection.style.backgroundSize = 'cover'
+// mainSection.style.backgroundPosition = 'center center'
+// mainSection.style.backgroundRepeat = 'no-repeat'
+// mainSection.style.height = '100vh'
 
-const changeBackground = () => {
-  input.addEventListener('change', function () {
-    const inputValue = document.querySelector('#input-field').value
+// body.style.backgroundImage = 'url(`/assets/homepage/e1.jpg`)'
+// body.style.backgroundSize = 'cover'
+// body.style.backgroundPosition = 'center center'
+// body.style.backgroundRepeat = 'no-repeat'
+// const changeBackground = () => {
+//   input.addEventListener('change', function () {
+//     const inputValue = document.querySelector('#input-field').value
 
-    for (let i = 0; i < cities.length; i++) {
-      if (inputValue === cities[i].city) {
-        heroImg.innerHTML = `<img src='${cities[i].img}' style="z-index:1;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;" />
-        
-        `
-      }
-    }
-    addDate()
-  })
-}
-changeBackground()
+//     for (let i = 0; i < cities.length; i++) {
+//       if (inputValue === cities[i].city) {
+//         heroImg.innerHTML = `<img src='${cities[i].img}' style="z-index:1;background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;" />
+
+//         `
+//       }
+//     }
+//     addDate()
+//   })
+// }
+// changeBackground()
 //style="background-size: cover;background-position: center center;background-repeat: no-repeat;height: 100vh;"
 //the code works but the image needs to not repeat..
 
@@ -132,11 +143,11 @@ const citiesLogos = [
 // for every section in the homepage that has text+image and make it so
 // that every section which contains img+text gets generated in a randomized order on every page refresh.
 
-const shuffledCities = citiesLogos => {
-  citiesLogos.sort(() => Math.random() - 0.5)
-  return citiesLogos
-}
-shuffledCities(citiesLogos)
+// const shuffledCities = citiesLogos => {
+//   citiesLogos.sort(() => Math.random() - 0.5)
+//   return citiesLogos
+// }
+// shuffledCities(citiesLogos)
 //console.log(shuffledCities(citiesLogos))
 
 //  <div class="d-flex align-items-center">
@@ -182,19 +193,19 @@ shuffledCities(citiesLogos)
 // Apply it in a <span> above the <h1> to show to the user the date and time of the search, but instead of the comma, separate the two with an em dash: — like so: "09/07/2021 — 12:51:15"
 // (you can create the em dash with a combination on the numpad that is: ALT + 0151)
 
-let today = new Date()
-let dd = String(today.getDate()).padStart(2, '0')
-let mm = String(today.getMonth() + 1).padStart(2, '0')
-let yyyy = today.getFullYear()
-let time =
-  today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
-today = mm + '/' + dd + '/' + yyyy
+// let today = new Date()
+// let dd = String(today.getDate()).padStart(2, '0')
+// let mm = String(today.getMonth() + 1).padStart(2, '0')
+// let yyyy = today.getFullYear()
+// let time =
+//   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+// today = mm + '/' + dd + '/' + yyyy
 
-const addDate = () => {
-  dateElement.classList.add('mx-auto', 'w-50', 'text-center', 'white')
-  dateElement.innerHTML += `${today} - ${time}`
-  cta.prepend(dateElement)
-}
+// const addDate = () => {
+//   dateElement.classList.add('mx-auto', 'w-50', 'text-center', 'white')
+//   dateElement.innerHTML += `${today} - ${time}`
+//   cta.prepend(dateElement)
+// }
 
 //console.log(today, time)
 

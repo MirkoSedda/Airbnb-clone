@@ -2,16 +2,13 @@
   outline: none;
 }
 
-.hero-img {
+.hero-section {
+  background-color: coral !important;
   background-image: url('/assets/homepage/img1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
-}
-
-.hero-section {
-  z-index: 10;
 }
 
 .badge {
@@ -52,7 +49,7 @@
   font-size: 12px;
 }
 
-.cta {
+.cta-section {
   height: 600px;
   position: relative;
 }
