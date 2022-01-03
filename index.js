@@ -51,7 +51,9 @@ const input = document.querySelector('#input-field')
 const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
+const jsContent = document.querySelector('.js-content')
 
+// legacy method
 // const changeBackground = () => {
 //   input.addEventListener('change', function () {
 //     const inputValue = document.querySelector('#input-field').value
@@ -77,9 +79,9 @@ const dateElement = document.querySelector('.date')
 const changeBackground = () => {
   input.addEventListener('change', function () {
     const inputValue = document.querySelector('#input-field').value
-    const h1 = document.createElement('h1')
-    h1.innerHTML += `<h1 class="mx-auto w-50 text-center white">${input.value}</h1>`
-    cta.prepend(h1)
+    //const h1 = document.createElement('h1')
+    jsContent.innerHTML += `<h1 class="mx-auto w-50 text-center white">${input.value}</h1>`
+    cta.prepend(jsContent)
     for (let i = 0; i < cities.length; i++) {
       if (inputValue === cities[i].city) {
         heroSection.style.backgroundImage = 'url(`cities${i}.img`)'
@@ -196,8 +198,7 @@ let time =
 today = mm + '/' + dd + '/' + yyyy
 
 const addDate = () => {
-  dateElement.classList.add('mx-auto', 'w-50', 'text-center', 'white')
-  dateElement.innerHTML += `${today} - ${time}`
+  dateElement.innerHTML += `<h1 class="date mx-auto w-50 text-center white">${today} - ${time}</h1> `
   cta.prepend(dateElement)
 }
 
