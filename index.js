@@ -127,7 +127,7 @@ const randomizeOne = () => {
         width="100px"
       />
       <div class="ms-3">
-        <h5 class="text-bold fs-5">Milan</h5>
+        <h5 class="text-bold fs-5">${cities[i].city}</h5>
         <span class="text-muted fs-6">1-hour drive</span>
       </div>
     </div>
@@ -138,7 +138,7 @@ const randomizeOne = () => {
 randomizeOne()
 
 const randomizeTwo = () => {
-  let arr = [1, 2, 3, 4].sort(() => Math.random() - 0.5)
+  let arr = [5, 6, 7, 8].sort(() => Math.random() - 0.5)
   for (let i = 0; i <= 3; i++) {
     randomTwo.innerHTML += `
     <div class="col">
@@ -151,7 +151,7 @@ const randomizeTwo = () => {
         width="100px"
       />
       <div class="ms-3">
-        <h5 class="text-bold fs-5">Milan</h5>
+        <h5 class="text-bold fs-5">${cities[i + 4].city}</h5>
         <span class="text-muted fs-6">1-hour drive</span>
       </div>
     </div>
