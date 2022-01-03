@@ -1,14 +1,14 @@
-// #### JS EXERCISES
+// JS EXERCISES
 
-// EXERCISE 1
-// Take the value from the city input field and display it in an H1 on the center of the Hero content, on top of the image.
-// The letters should appear one by one while the user types them in the input.
-// We also want to display the picture of the corresponding searched city as the new background of the hero section.
-// In the same place you took the input value, use -at the same time- a for loop to perform a check
-// on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
-// Check if the searched city is found in any object in the array.
-// If it's found, use the img property as the new source for the background image of the hero section.
-// What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.
+/*EXERCISE 1
+Take the value from the city input field and display it in an H1 on the center of the Hero content, on top of the image.
+The letters should appear one by one while the user types them in the input.
+We also want to display the picture of the corresponding searched city as the new background of the hero section.
+In the same place you took the input value, use -at the same time- a for loop to perform a check
+on the previously created array of city+img #### BEWARE: (no advanced methods allowed: only for loops and if statements).
+Check if the searched city is found in any object in the array.
+If it's found, use the img property as the new source for the background image of the hero section.
+What you should see in the end is: the image of the city as background and the name of the city as the H1 title on top of it.*/
 
 const cities = [
   {
@@ -97,98 +97,49 @@ const changeBackground = () => {
 }
 changeBackground()
 
-// EXERCISE 2
-// Create an array of objects for each city you can think of. Each one should look like the following:
+/*EXERCISE 2
+Create an array of objects for each city you can think of. Each one should look like the following:
+look above for the array of objects*/
 
-const citiesLogos = [
-  {
-    city: 'Milan',
-    img: '/assets/homepage/e1.jpg',
-  },
-  {
-    city: 'Venice',
-    img: '/assets/homepage/e2.jpg',
-  },
-  {
-    city: 'Florence',
-    img: '/assets/homepage/e3.jpg',
-  },
-  {
-    city: 'Bologna',
-    img: '/assets/homepage/e4.jpg',
-  },
-  {
-    city: 'Turin',
-    img: '/assets/homepage/e5.jpg',
-  },
-  {
-    city: 'Verona',
-    img: '/assets/homepage/e6.jpg',
-  },
-  {
-    city: 'Genova',
-    img: '/assets/homepage/e7.jpg',
-  },
-  {
-    city: 'La Spezia',
-    img: '/assets/homepage/e8.jpg',
-  },
-]
-
-// EXERCISE 4
+// EXERCISE 3
 // create new arrays with similar structure [{img: "http://...", text: "lorem ipsum"}, {...}, {...}]
 // for every section in the homepage that has text+image and make it so
 // that every section which contains img+text gets generated in a randomized order on every page refresh.
 
-const shuffledCities = citiesLogos => {
-  citiesLogos.sort(() => Math.random() - 0.5)
-  return citiesLogos
+const shuffledCities = cities => {
+  cities.sort(() => Math.random() - 0.5)
+  return cities
 }
-shuffledCities(citiesLogos)
-console.log(shuffledCities(citiesLogos))
+shuffledCities(cities)
+console.log(shuffledCities(cities))
 
-//  <div class="d-flex align-items-center">
-//     <img
-//       src="/assets/homepage/e1.jpg"
-//       class="rounded-3"
-//       alt="city picture"
-//       width="100px"
-//     />
-//     <div class="ms-3">
-//       <h5 class="text-bold fs-5">Milan</h5>
-//       <span class="text-muted fs-6">1-hour drive</span>
-//     </div>
-//   </div >
+const images = () => {
+  arr = []
+  for (let i = 1; i <= 8; i++) {
+    arr.push(`/assets/homepage/e${[i]}.jpg`)
+  }
+  return arr
+}
+images()
 
-// const images = () => {
-//   arr = []
-//   for (let i = 1; i <= 8; i++) {
-//     arr.push(`/assets/homepage / e${[i]}.jpg`)
-//   }
-//   return arr
-// }
-// images()
+console.log(images())
 
-// const changeImg = arr => {
-//   console.log(selectedImgs)
-//   for (i = 0; i < arr.length; i++) {
-//     const imgItem = document.querySelector(`#img[${i}]`)
-//     console.log('hey')
-//     console.log(imgItem)
+const changeImg = arr => {
+  console.log(selectedImgs)
+  for (i = 0; i < arr.length; i++) {
+    const imgItem = document.querySelector(`#img${i}`)
+    const imgPath = arr[i]
+    console.log((selectedImgs.src = imgPath))
+  }
+}
+changeImg(images())
 
-//     const imgPath = arr[i]
-//     console.log(imgPath)
-//     console.log((selectedImgs.src = imgPath))
-//   }
-// }
-// changeImg(images())
+/*EXERCISE 4
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
 
-// EXERCISE 5
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
-//
-// Create a Date object via JavaScript and format it to have a date looking like this: "09/07/2021, 12:51:15"
-// Apply it in a <span> above the <h1> to show to the user the date and time of the search, but instead of the comma, separate the two with an em dash: — like so: "09/07/2021 — 12:51:15"
-// (you can create the em dash with a combination on the numpad that is: ALT + 0151)
+Create a Date object via JavaScript and format it to have a date looking like this: "09/07/2021, 12:51:15"
+Apply it in a <span> above the <h1> to show to the user the date and time of the search, but instead of the comma, separate the two with an em dash: — like so: "09/07/2021 — 12:51:15"
+(you can create the em dash with a combination on the numpad that is: ALT + 0151)*/
 
 let today = new Date()
 let dd = String(today.getDate()).padStart(2, '0')
@@ -198,7 +149,7 @@ let time =
   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
 today = mm + '/' + dd + '/' + yyyy
 
-// EXERCISE 6
+// EXERCISE 5
 // The search fields include: Location, Check-in date, Check-out date, Number of guests. You've displayed the first one in the H1 field on EX 1 already.
 // Let's use the rest of the data in this way; when the user clicks the search button:
 // - Create a list below the H1.
@@ -208,7 +159,7 @@ today = mm + '/' + dd + '/' + yyyy
 // - and the number of guests the user have selected in another list item.
 //      Guests: 2
 
-// EXERCISE 7
+// EXERCISE 6
 // On the "I'm flexible" button that you have in the page, attach the functionality to open a modal that displays
 // a random city and image from the first array that you've created.
 
