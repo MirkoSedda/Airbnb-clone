@@ -79,9 +79,11 @@ const jsContent = document.querySelector('.js-content')
 const changeBackground = () => {
   input.addEventListener('change', function () {
     const inputValue = document.querySelector('#input-field').value
-    //const h1 = document.createElement('h1')
-    jsContent.innerHTML += `<h1 class="mx-auto w-50 text-center white">${input.value}</h1>`
-    cta.prepend(jsContent)
+    const date =
+      (dateElement.innerHTML += `<h1 class="date mx-auto w-50 text-center white">${today} - ${time}</h1> `)
+    const city =
+      (jsContent.innerHTML += `<h1 class="mx-auto w-50 text-center white">${input.value}</h1>`)
+
     for (let i = 0; i < cities.length; i++) {
       if (inputValue === cities[i].city) {
         heroSection.style.backgroundImage = 'url(`cities${i}.img`)'
@@ -91,7 +93,6 @@ const changeBackground = () => {
         heroSection.style.height = '100vh'
       }
     }
-    addDate()
   })
 }
 changeBackground()
@@ -196,13 +197,6 @@ let yyyy = today.getFullYear()
 let time =
   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
 today = mm + '/' + dd + '/' + yyyy
-
-const addDate = () => {
-  dateElement.innerHTML += `<h1 class="date mx-auto w-50 text-center white">${today} - ${time}</h1> `
-  cta.prepend(dateElement)
-}
-
-console.log(today, time)
 
 // EXERCISE 6
 // The search fields include: Location, Check-in date, Check-out date, Number of guests. You've displayed the first one in the H1 field on EX 1 already.
