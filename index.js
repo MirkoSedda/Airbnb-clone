@@ -56,6 +56,7 @@ const cities = [
 const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
+const ulElement = document.querySelector('ul')
 const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
@@ -169,22 +170,6 @@ const randomizeTwo = () => {
 }
 randomizeTwo()
 
-// <div class="col random">
-//   <div class="d-flex align-items-center">
-//     <img
-//       src="/assets/homepage/e1.jpg"
-//       class="rounded-3 selected-img"
-//       id="img1"
-//       alt="city picture"
-//       width="100px"
-//     />
-//     <div class="ms-3">
-//       <h5 class="text-bold fs-5">Milan</h5>
-//       <span class="text-muted fs-6">1-hour drive</span>
-//     </div>
-//   </div>
-// </div>
-
 /*EXERCISE 4
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
 
@@ -209,6 +194,36 @@ today = mm + '/' + dd + '/' + yyyy
 //      Check out: 30/07/2021
 // - and the number of guests the user have selected in another list item.
 //      Guests: 2
+
+cta.prepend(bookingList)
+
+const click = () => {
+  const bookingList = document.createElement('ul')
+  const checkIn = document.getElementById('check-in')
+  const checkOut = document.getElementById('check-out')
+  const guests = document.getElementById('guests')
+  const searchIcon = document.querySelector('search-icon')
+
+  const checkInItem = document.createElement('li')
+  const checkOutItem = document.createElement('li')
+  const guestsItem = document.createElement('li')
+
+  checkInItem.innerText = checkIn.value
+  checkOutItem.innerText = checkOut.value
+  guestsItem.innerText = guests.value
+
+  bookingList.appendChild(checkInItem)
+  bookingList.appendChild(checkOutItem)
+  bookingList.appendChild(guestsItem)
+}
+
+// const booking = `  <ul class="list-group">
+//     <li class="list-group-item">An item</li>
+//     <li class="list-group-item">A second item</li>
+//     <li class="list-group-item">A third item</li>
+//     <li class="list-group-item">A fourth item</li>
+//     <li class="list-group-item">And a fifth one</li>
+//   </ul>`
 
 // EXERCISE 6
 // On the "I'm flexible" button that you have in the page, attach the functionality to open a modal that displays
