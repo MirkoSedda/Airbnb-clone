@@ -24,22 +24,43 @@
   font-size: 20px;
 }
 
-.search-container {
+.search-container-desktop {
   max-width: 684px;
   margin-left: 50%;
   transform: translate(-50%);
 }
 
-.search {
+.search-desktop {
   background-color: white !important;
   border-radius: 50px;
+}
+.search-icon-desktop {
+  position: absolute;
+  top: 9px;
+  left: 620px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: red !important;
+  color: white !important;
 }
 
 .search-bar {
   position: relative;
 }
 
-.search-icon {
+.search-container-mobile {
+  max-width: 684px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.search-mobile {
+  background-color: white !important;
+  border-radius: 50px;
+}
+
+.search-icon-mobile {
   position: absolute;
   top: 9px;
   left: 620px;
@@ -116,12 +137,12 @@
 }
 
 @media (min-width: 1024px) {
-  .search-container {
+  .search-container-desktop {
     min-width: 660px;
     margin-left: 50%;
     transform: translate(-50%);
   }
-  .search-icon {
+  .search-icon-desktop {
     position: absolute;
     top: 9px;
     left: 600px;

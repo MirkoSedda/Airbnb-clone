@@ -142,7 +142,7 @@ const experiences = [
 const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
-const searchIcon = document.querySelector('.search-icon')
+const searchIcon = document.querySelector('.search-icon-desktop')
 const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
@@ -158,9 +158,6 @@ const bookingCard = () => {
     const checkIn = document.getElementById('check-in').value
     const checkOut = document.getElementById('check-out').value
     const guests = document.getElementById('guests').value
-    console.log(checkIn)
-    console.log(checkOut)
-    console.log(guests)
     for (let i = 0; i < cities.length; i++) {
       const booking = document.querySelector('.booking')
       if (inputValue === cities[i].city) {

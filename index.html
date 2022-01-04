@@ -27,7 +27,9 @@
     <div class="hero-section">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg text-light">
-        <div class="container-fluid d-flex justify-content-around">
+        <div
+          class="container-lg d-flex justify-content-around navbar-container"
+        >
           <div class="me">
             <a class="navbar-brand" href="#">
               <img
@@ -97,10 +99,10 @@
         </div>
       </nav>
 
-      <!-- Search bar -->
-      <div class="search-container">
+      <!-- Search bar desktop -->
+      <div class="search-container-desktop">
         <div
-          class="container-lg d-flex d-none d-lg-block search bg-light text-dark justify-content-center align-items-center p-2"
+          class="container-lg d-flex d-none d-lg-block search-desktop bg-light text-dark justify-content-center align-items-center p-2"
         >
           <div class="row search-bar">
             <div class="col-3-lg col-md-auto">
@@ -156,7 +158,7 @@
             </div>
           </div>
           <div
-            class="search-icon d-flex align-items-center justify-content-center"
+            class="search-icon-desktop d-flex align-items-center justify-content-center"
           >
             <i class="bi bi-search"></i>
           </div>
@@ -168,6 +170,29 @@
       <div
         class="container-lg booking d-flex justify-content-center align-items-center"
       ></div>
+
+      <!-- Search bar mobile -->
+
+      <div class="search-container-mobile">
+        <div
+          class="container d-flex d-xs-block d-lg-none search-mobile bg-light text-dark justify-content-center align-items-center p-2"
+        >
+          <div
+            class="search-icon-mobile d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-search"></i>
+          </div>
+          <input
+            class="border-0 input-text"
+            type="text"
+            aria-label="Location"
+            class="form-control"
+            id="input-field"
+            placeholder="Where are you going?"
+          />
+        </div>
+      </div>
+
       <!-- Call to action content  -->
       <div class="container-lg cta-section">
         <h1 class="h3 center1 text-dark">Not sure where to go? Perfect.</h1>
@@ -179,7 +204,7 @@
         </h2>
       </div>
     </div>
-    <div class="spacer300"></div>
+    <div class="spacer100"></div>
 
     <!-- Explore nearby -->
     <section id="Places">
