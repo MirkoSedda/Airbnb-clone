@@ -152,8 +152,8 @@ const randomTwo = document.querySelector('.random-2')
 const randomThree = document.querySelector('.random-3')
 const randomFour = document.querySelector('.random-4')
 
-const changeBackground = () => {
-  searchIcon.addEventListener('click', function () {
+const bookingCard = () => {
+  searchIcon.addEventListener('click', () => {
     const inputValue = document.querySelector('#input-field').value
     const checkIn = document.getElementById('check-in').value
     const checkOut = document.getElementById('check-out').value
@@ -165,7 +165,7 @@ const changeBackground = () => {
       const booking = document.querySelector('.booking')
       if (inputValue === cities[i].city) {
         booking.innerHTML += `
-        <div class="card mb-3" style="max-width: 540px">
+        <div class="card mb-3 mt-5" style="max-width: 540px">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="${
@@ -192,7 +192,7 @@ const changeBackground = () => {
     }
   })
 }
-changeBackground()
+bookingCard()
 
 const randomizeOne = () => {
   let arr = [1, 2, 3, 4].sort(() => Math.random() - 0.5)
@@ -289,10 +289,9 @@ let mm = String(today.getMonth() + 1).padStart(2, '0')
 let yyyy = today.getFullYear()
 let time =
   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
-today = mm + '/' + dd + '/' + yyyy
+today = dd + '/' + mm + '/' + yyyy
 
-// const click = () => {
-//   checkInItem.innerText = checkIn.value
-//   checkOutItem.innerText = checkOut.value
-//   guestsItem.innerText = guests.value
-// }
+const modal = () => {
+  const ctaBtn = document.querySelector('.rounded-pill')
+  ctaBtn, addEventListener('click', () => {})
+}
