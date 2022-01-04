@@ -168,18 +168,15 @@ const changeBackground = () => {
           <div class="col-md-4">
             <img src="${
               cities[i + 1].img
-            }" class="img-fluid rounded-start" alt="${city - img}" />
+            }" class="img-fluid rounded-start" alt="${
+          cities[i + 1].city
+        }-img" />
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${
                 cities[i + 1].city
               } ~ ${today} - ${time}</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-              </ul>
               <a href="#" class="btn btn-primary">Book now</a>
             </div>
           </div>
