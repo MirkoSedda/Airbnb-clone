@@ -121,6 +121,24 @@ const liveAnywhere = [
   },
 ].sort(() => Math.random() - 0.5)
 
+const experiences = [
+  {
+    img: '/assets/homepage/d1.jpg',
+    text1: 'Outdoor collection',
+    text2: 'Experiences that immerse you in nature.',
+  },
+  {
+    img: '/assets/homepage/d2.jpg',
+    text1: 'Online experiences',
+    text2: 'Live, interactive activities led by hosts',
+  },
+  {
+    img: '/assets/homepage/d3.jpg',
+    text1: 'Experiences',
+    text2: 'Local things to do, wherever you are.',
+  },
+].sort(() => Math.random() - 0.5)
+
 const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
@@ -132,6 +150,7 @@ const jsContent = document.querySelector('.js-content')
 const randomOne = document.querySelector('.random-1')
 const randomTwo = document.querySelector('.random-2')
 const randomThree = document.querySelector('.random-3')
+const randomFour = document.querySelector('.random-4')
 
 const changeBackground = () => {
   input.addEventListener('change', function () {
@@ -203,8 +222,6 @@ const randomizeTwo = () => {
 randomizeTwo()
 
 const randomizeThree = () => {
-  let arr1 = [1, 2, 3, 4].sort(() => Math.random() - 0.5)
-
   for (let i = 0; i <= 3; i++) {
     randomThree.innerHTML += `
           <div class="col-md-6 col-lg-3 px-2">
@@ -222,6 +239,28 @@ const randomizeThree = () => {
   }
 }
 randomizeThree()
+
+const randomizeFour = () => {
+  for (let i = 0; i <= 2; i++) {
+    randomFour.innerHTML += `
+         <div class="col-md-6 col-lg-4">
+            <div class="d-flex align-items-center">
+              <img
+                src="${experiences[i].img}"
+                class="rounded-3"
+                alt="girl picture"
+                width="100%"
+              />
+            </div>
+            <h5 class="text-bold fs-5 mt-2">${experiences[i].text1}</h5>
+            <h3 class="h6 text-muted">
+             ${experiences[i].text2}
+            </h3>
+          </div>  
+    `
+  }
+}
+randomizeFour()
 
 let today = new Date()
 let dd = String(today.getDate()).padStart(2, '0')
