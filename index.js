@@ -143,7 +143,6 @@ const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
 const searchIcon = document.querySelector('.search-icon')
-const ulElement = document.querySelector('ul')
 const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
@@ -154,20 +153,39 @@ const randomThree = document.querySelector('.random-3')
 const randomFour = document.querySelector('.random-4')
 
 const changeBackground = () => {
-  input.addEventListener('change', function () {
+  searchIcon.addEventListener('click', function () {
     const inputValue = document.querySelector('#input-field').value
-    const date =
-      (dateElement.innerHTML += `<h1 class="date mx-auto w-50 text-center white">${today} - ${time}</h1> `)
-    const city =
-      (jsContent.innerHTML += `<h1 class="mx-auto w-50 text-center white">${input.value}</h1>`)
+    const checkIn = document.getElementById('check-in')
+    const checkOut = document.getElementById('check-out')
+    const guests = document.getElementById('guests')
 
     for (let i = 0; i < cities.length; i++) {
+      const booking = document.querySelector('.booking')
       if (inputValue === cities[i].city) {
-        heroSection.style.backgroundImage = 'url(`cities${i}.img`)'
-        heroSection.style.backgroundSize = 'cover'
-        heroSection.style.backgroundPosition = 'center center'
-        heroSection.style.backgroundRepeat = 'no-repeat'
-        heroSection.style.height = '100vh'
+        booking.innerHTML += `
+        <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${
+              cities[i + 1].img
+            }" class="img-fluid rounded-start" alt="${city - img}" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${
+                cities[i + 1].city
+              } ~ ${today} - ${time}</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+              <a href="#" class="btn btn-primary">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
       }
     }
   })
@@ -271,25 +289,8 @@ let time =
   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
 today = mm + '/' + dd + '/' + yyyy
 
-const click = () => {
-  const searchIcon = document.querySelector('.search-icon')
-  const bookingList = document.createElement('ul')
-  const checkIn = document.getElementById('check-in')
-  const checkOut = document.getElementById('check-out')
-  const guests = document.getElementById('guests')
-
-  checkInItem.innerText = checkIn.value
-  checkOutItem.innerText = checkOut.value
-  guestsItem.innerText = guests.value
-  searchIcon.addEventListener('click', click())
-  cta.prepend(bookingList)
-  console.log('anything')
-}
-
-// const booking = `  <ul class="list-group">
-//     <li class="list-group-item">An item</li>
-//     <li class="list-group-item">A second item</li>
-//     <li class="list-group-item">A third item</li>
-//     <li class="list-group-item">A fourth item</li>
-//     <li class="list-group-item">And a fifth one</li>
-//   </ul>`
+// const click = () => {
+//   checkInItem.innerText = checkIn.value
+//   checkOutItem.innerText = checkOut.value
+//   guestsItem.innerText = guests.value
+// }
