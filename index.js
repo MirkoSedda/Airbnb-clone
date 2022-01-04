@@ -142,6 +142,7 @@ const experiences = [
 const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
+const searchIcon = document.querySelector('.search-icon')
 const ulElement = document.querySelector('ul')
 const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')

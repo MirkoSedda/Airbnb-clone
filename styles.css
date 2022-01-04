@@ -114,3 +114,21 @@
 .right {
   margin-right: 60px;
 }
+
+@media (min-width: 1024px) {
+  .search-container {
+    min-width: 660px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  .search-icon {
+    position: absolute;
+    top: 9px;
+    left: 600px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: red !important;
+    color: white !important;
+  }
+}
