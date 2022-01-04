@@ -24,6 +24,12 @@
   font-size: 20px;
 }
 
+.search-container {
+  max-width: 684px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
 .search {
   background-color: white !important;
   border-radius: 50px;
@@ -35,7 +41,8 @@
 
 .search-icon {
   position: absolute;
-  top: 125px;
+  top: 9px;
+  left: 620px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
