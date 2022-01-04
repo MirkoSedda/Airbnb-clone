@@ -11,6 +11,10 @@
   height: 100vh;
 }
 
+.navbar {
+  margin-left: -9%;
+}
+
 .badge {
   background-color: white !important;
   border-radius: 20px;
@@ -26,7 +30,7 @@
 
 .search-container-desktop {
   max-width: 684px;
-  margin-left: 50%;
+  margin-left: 45%;
   transform: translate(-50%);
 }
 
@@ -139,7 +143,7 @@
 @media (min-width: 1024px) {
   .search-container-desktop {
     min-width: 660px;
-    margin-left: 50%;
+    margin-left: 45%;
     transform: translate(-50%);
   }
   .search-icon-desktop {
