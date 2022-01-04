@@ -54,6 +54,11 @@
   position: relative;
 }
 
+.margin {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
 .center1 {
   margin: 0;
   position: absolute;
