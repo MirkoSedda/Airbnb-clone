@@ -29,8 +29,13 @@
   border-radius: 50px;
 }
 
+.search-bar {
+  position: relative;
+}
+
 .search-icon {
-  margin-left: -60px;
+  position: absolute;
+  top: 125px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
