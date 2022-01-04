@@ -164,3 +164,9 @@
     margin-right: 12px !important;
   }
 }
+
+@media (min-width: 768px) {
+  .navbar {
+    margin: 0;
+  }
+}
