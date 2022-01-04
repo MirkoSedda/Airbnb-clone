@@ -155,10 +155,12 @@ const randomFour = document.querySelector('.random-4')
 const changeBackground = () => {
   searchIcon.addEventListener('click', function () {
     const inputValue = document.querySelector('#input-field').value
-    const checkIn = document.getElementById('check-in')
-    const checkOut = document.getElementById('check-out')
-    const guests = document.getElementById('guests')
-
+    const checkIn = document.getElementById('check-in').value
+    const checkOut = document.getElementById('check-out').value
+    const guests = document.getElementById('guests').value
+    console.log(checkIn)
+    console.log(checkOut)
+    console.log(guests)
     for (let i = 0; i < cities.length; i++) {
       const booking = document.querySelector('.booking')
       if (inputValue === cities[i].city) {
@@ -177,7 +179,10 @@ const changeBackground = () => {
               <h5 class="card-title">${
                 cities[i + 1].city
               } ~ ${today} - ${time}</h5>
-              <a href="#" class="btn btn-primary">Book now</a>
+              <span class="p-2">Check-in: ${checkIn}</span><br>
+              <span class="p-2">Check-out: ${checkOut}</span><br>
+              <span class="p-2">Guests: ${guests}</span><br>
+              <a href="#"  class="btn btn-dark mt-3 p-2">Book now!</a>
             </div>
           </div>
         </div>
