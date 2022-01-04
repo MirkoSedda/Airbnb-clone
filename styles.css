@@ -156,4 +156,11 @@
     background-color: red !important;
     color: white !important;
   }
+  a {
+    font-size: 14px;
+  }
+
+  .i {
+    margin-right: 12px !important;
+  }
 }
