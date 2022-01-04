@@ -102,6 +102,25 @@ const cities = [
   },
 ].sort(() => Math.random() - 0.5)
 
+const liveAnywhere = [
+  {
+    img: '/assets/homepage/l1.jpg',
+    text: 'Outdoor getaways',
+  },
+  {
+    img: '/assets/homepage/l2.jpg',
+    text: 'Unique stays',
+  },
+  {
+    img: '/assets/homepage/l3.jpg',
+    text: 'Entire homes',
+  },
+  {
+    img: '/assets/homepage/l4.jpg',
+    text: 'Pets allowed',
+  },
+].sort(() => Math.random() - 0.5)
+
 const body = document.querySelector('body')
 const heroSection = document.querySelector('.hero-section')
 const input = document.querySelector('#input-field')
@@ -110,8 +129,9 @@ const cta = document.querySelector('.cta-section')
 const selectedImgs = document.querySelectorAll('.selected-img')
 const dateElement = document.querySelector('.date')
 const jsContent = document.querySelector('.js-content')
-const randomOne = document.querySelector('.random-one')
-const randomTwo = document.querySelector('.random-two')
+const randomOne = document.querySelector('.random-1')
+const randomTwo = document.querySelector('.random-2')
+const randomThree = document.querySelector('.random-3')
 
 const changeBackground = () => {
   input.addEventListener('change', function () {
@@ -181,6 +201,27 @@ const randomizeTwo = () => {
   }
 }
 randomizeTwo()
+
+const randomizeThree = () => {
+  let arr1 = [1, 2, 3, 4].sort(() => Math.random() - 0.5)
+
+  for (let i = 0; i <= 3; i++) {
+    randomThree.innerHTML += `
+          <div class="col-md-6 col-lg-3 px-2">
+            <div class="d-flex align-items-center">
+              <img
+                src="${liveAnywhere[i].img}"
+                class="rounded-3"
+                alt="city picture"
+                width="100%"
+              />
+            </div>
+            <h5 class="text-bold fs-5 mt-2">${liveAnywhere[i].text}</h5>
+          </div>
+    `
+  }
+}
+randomizeThree()
 
 let today = new Date()
 let dd = String(today.getDate()).padStart(2, '0')
