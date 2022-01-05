@@ -161,6 +161,18 @@
     margin-bottom: 10px !important;
   }
 
+  .destinations {
+    font-size: 17px !important;
+  }
+
+  .cities-col {
+    font-size: 14px !important;
+  }
+
+  .small-text {
+    font-size: 14px !important;
+  }
+
   a {
     font-size: 14px;
   }
@@ -169,9 +181,21 @@
     margin-right: 12px !important;
   }
 
+  .footer-links {
+    margin-bottom: 6px !important;
+  }
+
   .footer {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .footer-right {
+    margin-left: 90px !important;
+  }
+
+  .pound {
+    margin-right: 25px !important;
   }
 }
 
