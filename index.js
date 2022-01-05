@@ -220,7 +220,7 @@ const randomizeTwo = () => {
   for (let i = 0; i <= 3; i++) {
     randomTwo.innerHTML += `
     <div class="col-md-6 col-lg-3 mt-5">
-    <div class="d-flex align-items-center">
+   <div class="d-flex align-items-center">
       <img
         src="/assets/homepage/e${arr[i]}.jpg"
         class="rounded-3 selected-img"

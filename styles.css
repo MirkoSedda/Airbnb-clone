@@ -111,6 +111,10 @@
   height: 5px;
 }
 
+.spacer25 {
+  height: 25px;
+}
+
 .spacer50 {
   height: 50px;
 }
@@ -156,6 +160,11 @@
     background-color: red !important;
     color: white !important;
   }
+
+  .explore {
+    margin-bottom: 10px !important;
+  }
+
   a {
     font-size: 14px;
   }
@@ -179,5 +188,27 @@
     height: 35px;
     background-color: white !important;
     color: black !important;
+  }
+
+  .random-1,
+  .random-2 {
+    margin-left: 110px;
+  }
+
+  .destinations {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+  }
+
+  .small-text {
+    font-size: 15px !important;
+  }
+
+  .cities-rows {
+    margin-bottom: 0px !important;
+  }
+
+  .cities-col {
+    padding: 4px;
   }
 }
