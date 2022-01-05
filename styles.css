@@ -143,7 +143,7 @@
 @media (min-width: 1024px) {
   .search-container-desktop {
     min-width: 660px;
-    margin-left: 45%;
+    margin-left: 50%;
     transform: translate(-50%);
   }
   .search-icon-desktop {
@@ -168,5 +168,16 @@
 @media (min-width: 768px) {
   .navbar {
     margin: 0;
+  }
+
+  .search-icon-mobile {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: white !important;
+    color: black !important;
   }
 }
