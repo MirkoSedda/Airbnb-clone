@@ -140,11 +140,7 @@
   font-size: 12px;
 }
 
-.footer-right {
-  margin-right: 60px;
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .search-container-desktop {
     min-width: 660px;
     margin-left: 50%;
@@ -179,7 +175,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .navbar {
     margin: 0;
   }
