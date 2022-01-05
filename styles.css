@@ -225,8 +225,8 @@
     padding-left: 4px !important;
   }
 
-  .small-text {
-    font-size: 15px !important;
+  .destinations {
+    font-size: 14px !important;
   }
 
   .cities-rows {
@@ -235,8 +235,13 @@
 
   .cities-col {
     width: 300px !important;
-    margin-left: 7px;
+    margin-left: 7px !important;
     padding: 4px;
+    font-size: 13px !important;
+  }
+
+  .small-text {
+    font-size: 12px !important;
   }
 
   .pound {
