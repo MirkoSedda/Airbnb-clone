@@ -140,6 +140,8 @@
   font-size: 12px;
 }
 
+/* Laptop media query  */
+
 @media (max-width: 1024px) {
   .search-container-desktop {
     min-width: 660px;
@@ -199,6 +201,8 @@
   }
 }
 
+/* Tablet media query */
+
 @media (max-width: 768px) {
   .navbar {
     margin: 0;
@@ -253,34 +257,78 @@
   }
 }
 
+/* Smartphone media query */
+
 @media (max-width: 425px) {
-  .navbar {
-    margin: 0;
+  .search-container-mobile {
+    margin-top: 30px !important;
   }
 
   .search-icon-mobile {
     position: absolute;
-    top: 0px;
+    top: 4px;
     left: 0px;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background-color: white !important;
     color: black !important;
   }
 
+  .center1 {
+    font-size: 21px !important;
+  }
+
+  .perfect {
+    display: block !important;
+    margin-bottom: 50px !important;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  .explore {
+    margin-top: 50px !important;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
   .random-1,
   .random-2 {
-    margin-left: 110px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  .live {
+    margin-top: 50px !important;
+  }
+
+  .live-cards {
+    margin-bottom: 30px !important;
+  }
+
+  .live-titles {
+    margin-top: 15px !important;
+  }
+
+  .discover {
+    margin-top: 10px !important;
+  }
+
+  .unique-activities {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .experiences-img-titles {
+    margin-top: 10px !important;
   }
 
   .destinations {
-    padding-right: 4px !important;
-    padding-left: 4px !important;
+    padding-top: 4px !important;
   }
 
   .small-text {
-    font-size: 15px !important;
+    font-size: 12px !important;
   }
 
   .cities-rows {

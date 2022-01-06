@@ -242,7 +242,7 @@ randomizeTwo()
 const randomizeThree = () => {
   for (let i = 0; i <= 3; i++) {
     randomThree.innerHTML += `
-          <div class="col-md-6 col-lg-3 px-2">
+          <div class="live-cards col-md-6 col-lg-3 px-2">
             <div class="d-flex align-items-center">
               <img
                 src="${liveAnywhere[i].img}"
@@ -251,7 +251,7 @@ const randomizeThree = () => {
                 width="100%"
               />
             </div>
-            <h5 class="text-bold fs-5 mt-2">${liveAnywhere[i].text}</h5>
+            <h5 class="live-titles text-bold fs-5 mt-2">${liveAnywhere[i].text}</h5>
           </div>
     `
   }
@@ -270,7 +270,7 @@ const randomizeFour = () => {
                 width="100%"
               />
             </div>
-            <h5 class="text-bold fs-5 mt-2">${experiences[i].text1}</h5>
+            <h5 class="experiences-img-titles text-bold fs-5 mt-2">${experiences[i].text1}</h5>
             <h3 class="h6 text-muted">
              ${experiences[i].text2}
             </h3>

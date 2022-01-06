@@ -26,78 +26,80 @@
     <!-- Hero section  -->
     <div class="hero-section">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg text-light">
-        <div
-          class="container-lg d-flex justify-content-around navbar-container"
-        >
-          <div class="me">
-            <a class="navbar-brand" href="#">
-              <img
-                src="/assets/homepage/logo.svg"
-                alt=""
-                width="100"
-                height="100"
-                class="logo d-inline-block"
-              />
-            </a>
-          </div>
-
-          <button
-            class="navbar-toggler"
-            +
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+      <div class="navbar-wrapper d-none d-sm-block">
+        <nav class="navbar navbar-expand-lg text-light">
+          <div
+            class="container-lg d-flex justify-content-around navbar-container"
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div class="me">
+              <a class="navbar-brand" href="#">
+                <img
+                  src="/assets/homepage/logo.svg"
+                  alt=""
+                  width="100"
+                  height="100"
+                  class="logo d-inline-block"
+                />
+              </a>
+            </div>
 
-          <div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-3">
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Places"
-                    >Places to stay</a
-                  >
-                </li>
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Experiences"
-                    >Experiences</a
-                  >
-                </li>
-                <li class="nav-item mx-2">
-                  <a
-                    class="nav-link active text-light"
-                    aria-current="page"
-                    href="#Online"
-                    >Online Experiences</a
-                  >
-                </li>
-              </ul>
+            <button
+              class="navbar-toggler"
+              +
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-3">
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Places"
+                      >Places to stay</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Experiences"
+                      >Experiences</a
+                    >
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a
+                      class="nav-link active text-light"
+                      aria-current="page"
+                      href="#Online"
+                      >Online Experiences</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >Become a host</a
+              >
+              <i class="icon2 bi bi-globe2 align-middle me-3"></i>
+              <span class="badge badge-pill text-dark p-2">
+                <i class="icon bi bi-list mx-2"></i>
+                <i class="icon bi bi-person-circle mx-2"></i>
+              </span>
             </div>
           </div>
-
-          <div class="d-flex justify-content-center align-items-center">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >Become a host</a
-            >
-            <i class="icon2 bi bi-globe2 align-middle me-3"></i>
-            <span class="badge badge-pill text-dark p-2">
-              <i class="icon bi bi-list mx-2"></i>
-              <i class="icon bi bi-person-circle mx-2"></i>
-            </span>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       <!-- Search bar desktop -->
       <div class="search-container-desktop">
@@ -195,8 +197,10 @@
 
       <!-- Call to action content  -->
       <div class="container-lg cta-section">
-        <h1 class="h3 center1 text-dark">Not sure where to go? Perfect.</h1>
-
+        <h1 class="h3 center1 text-dark">
+          Not sure where to go? <span class="perfect">Perfect.</span>
+        </h1>
+        <br class="d-block d-md-none" />
         <h2
           class="center2 badge rounded-pill py-3 px-5 fs-5 text-primary bg-light"
         >
@@ -221,12 +225,12 @@
     <!-- Live anywhere -->
     <section>
       <div class="container-lg">
-        <h2 class="mb-5">Live anywhere</h2>
+        <h2 class="live mb-5">Live anywhere</h2>
         <div class="row d-flex margin random-3"></div>
       </div>
     </section>
 
-    <div class="spacer50"></div>
+    <div class="spacer50 d-none d-md-block"></div>
 
     <!-- The greatest outdoor -->
 
@@ -240,13 +244,14 @@
 
     <div class="spacer100 d-none d-xl-block"></div>
     <div class="spacer50 d-none d-md-block"></div>
+    <div class="spacer25 d-block d-md-none"></div>
 
     <!-- Discover Experiences -->
 
     <section id="Experiences">
       <div class="container-lg">
-        <h2 class="mb-1">Discover Experiences</h2>
-        <h4 class="text-muted mb-3">
+        <h2 class="discover mb-1">Discover Experiences</h2>
+        <h4 class="unique-activities text-muted mb-3">
           Unique activities with local experts - in person or online
         </h4>
         <div class="row random-4"></div>
@@ -255,19 +260,21 @@
 
     <div class="spacer100 d-none d-xl-block"></div>
     <div class="spacer50 d-none d-md-block"></div>
+    <div class="spacer25 d-block d-md-none"></div>
 
     <!-- Try hosting -->
 
     <div class="container-lg">
       <img
         src="/assets/homepage/t1.jpg"
-        class="rounded-3 w-100"
+        class="try-hosting rounded-3 w-100"
         alt="seaside picture"
       />
     </div>
 
     <div class="spacer100 d-none d-xl-block"></div>
     <div class="spacer50 d-none d-md-block"></div>
+    <div class="spacer25 d-block d-md-none"></div>
 
     <!-- Future getaways -->
 
