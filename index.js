@@ -161,7 +161,7 @@ const bookingCard = () => {
     for (let i = 0; i < cities.length; i++) {
       const booking = document.querySelector('.booking')
       if (inputValue === cities[i].city) {
-        booking.innerHTML += `
+        booking.innerHTML = `
         <div class="card mb-3 mt-5" style="max-width: 540px">
         <div class="row g-0">
           <div class="col-md-4">
@@ -288,7 +288,29 @@ let time =
   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
 today = dd + '/' + mm + '/' + yyyy
 
-const modal = () => {
-  const ctaBtn = document.querySelector('.rounded-pill')
-  ctaBtn, addEventListener('click', () => {})
-}
+const ctaBtn = document.querySelector('.modal-btn')
+const modalBody = document.querySelector('.modal-body')
+ctaBtn.addEventListener('click', () => {
+  let i = Math.floor(Math.random() * 7)
+  modalBody.innerHTML = `
+        <div class="card mb-3 mt-5" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${
+              cities[i + 1].img
+            }" class="img-fluid rounded-start" alt="${
+    cities[i + 1].city
+  }-img" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${
+                cities[i + 1].city
+              } ~ ${today} - ${time}</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+})
